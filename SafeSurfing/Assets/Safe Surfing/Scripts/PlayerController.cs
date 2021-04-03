@@ -17,13 +17,11 @@ namespace SafeSurfing
         public bool IsMoving { get { return _Horizontal != 0 || _Vertical != 0; } }
         private float _Horizontal;
         private float _Vertical;
-        private float _InitialGravityScale;
 
         // Start is called before the first frame update
         void Start()
         {
             _RigidBody = GetComponent<Rigidbody2D>();
-            _InitialGravityScale = _RigidBody.gravityScale;
         }
 
         // Update is called once per frame
@@ -36,16 +34,20 @@ namespace SafeSurfing
 
         private void FixedUpdate()
         {
+            var newPosition = new Vector3();
+            var deltaTime = Time.deltaTime;
+            var localX = transform.localPosition.x;
+            var localY = transform.localPosition.y;
             if (IsMoving)
             {
-                _RigidBody.velocity = new Vector2(_Horizontal * Speed, _Vertical * Speed);
-                _RigidBody.gravityScale = 0;
+                newPosition = new Vector3(localX + _Horizontal * Speed * deltaTime, localY + _Vertical * Speed * deltaTime, 0);
             }
             else
             {
-                _RigidBody.velocity = new Vector2(0f, -FallSpeed);
-                _RigidBody.gravityScale = _InitialGravityScale;
+                newPosition = new Vector3(localX, localY - FallSpeed * deltaTime, 0);
             }
+
+            transform.localPosition = newPosition;
         }
     }
 
