@@ -66,7 +66,7 @@ namespace SafeSurfing
             if (collision.gameObject != Parent)
             {
                 if (collision.CompareTag("Bounds"))
-                    Destroy(gameObject, 0.25f);
+                    Destroy(gameObject, 0.1f);
             }
         }
     }

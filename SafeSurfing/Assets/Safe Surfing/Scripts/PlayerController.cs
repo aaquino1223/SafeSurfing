@@ -8,7 +8,6 @@ using static SafeSurfing.Common.Constants.PlayerInput;
 namespace SafeSurfing
 {
     [RequireComponent(typeof(BulletSpawner))]
-    [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerController : MonoBehaviour, IHeading
     {
         public float Speed = 5f;
