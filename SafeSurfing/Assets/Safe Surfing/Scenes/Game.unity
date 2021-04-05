@@ -1207,7 +1207,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 8390464969593622902, guid: f8cbb557493a98240a7f0d490aad4e19,
     type: 3}
   BulletSpeed: 10
-  FiringRate: 0
+  FiringRate: 0.5
 --- !u!114 &1085171969
 MonoBehaviour:
   m_ObjectHideFlags: 0

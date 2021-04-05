@@ -9,7 +9,8 @@ namespace SafeSurfing
     {
         public GameObject BulletPrefab;
         public float BulletSpeed = 10f;
-        public float FiringRate;
+        public float FiringRate = 0.5f;
+        private bool _ReadyToShoot = true;
 
         private IHeading _Heading;
 
@@ -27,7 +28,7 @@ namespace SafeSurfing
 
         public void Shoot()
         {
-            if (_Heading == null)
+            if (_Heading == null || !_ReadyToShoot)
                 return;
 
             var bulletClone = Instantiate(BulletPrefab, transform.position + _Heading.Heading, transform.rotation, transform.parent);
@@ -39,6 +40,15 @@ namespace SafeSurfing
             bulletController.Parent = gameObject;
             bulletController.Speed = BulletSpeed;
             bulletController.Direction = direction;
+
+            StartCoroutine(DisableShoot());
+        }
+
+        private IEnumerator DisableShoot()
+        {
+            _ReadyToShoot = false;
+            yield return new WaitForSeconds(FiringRate);
+            _ReadyToShoot = true;
         }
     }
 }

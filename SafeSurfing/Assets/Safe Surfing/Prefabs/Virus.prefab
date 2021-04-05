@@ -180,6 +180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 3
   Screen: {fileID: 0}
+  Destroyed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8506252650211399683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lives: 1
+  LifeLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7549949100994874390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,4 +214,4 @@ MonoBehaviour:
   BulletPrefab: {fileID: 8196226658101093830, guid: fafc491a830261f43b60f05dee594dca,
     type: 3}
   BulletSpeed: 10
-  FiringRate: 0
+  FiringRate: 1

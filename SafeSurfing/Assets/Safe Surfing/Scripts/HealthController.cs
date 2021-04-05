@@ -11,6 +11,19 @@ public class HealthController : MonoBehaviour
     public UnityEvent LifeLost;
 
     public bool IsDead => Lives == 0;
+    public bool IsIgnoringBullets { get; private set; }
+
+    public void SetIgnoreBullets(float ignoreTime)
+    {
+        StartCoroutine(IgnoreBullets(ignoreTime));
+    }
+
+    private IEnumerator IgnoreBullets(float time)
+    {
+        IsIgnoringBullets = true;
+        yield return new WaitForSeconds(time);
+        IsIgnoringBullets = false;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +39,7 @@ public class HealthController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Bullet"))
+        if (collision.CompareTag("Bullet") && !IsIgnoringBullets)
         {
             if (!IsDead)
             {

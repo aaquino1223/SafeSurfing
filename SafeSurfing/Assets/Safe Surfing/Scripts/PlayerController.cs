@@ -25,11 +25,21 @@ namespace SafeSurfing
         private float _Vertical;
 
         private BulletSpawner _BulletSpawner;
+        private HealthController _HealthController;
 
         // Start is called before the first frame update
         void Start()
         {
             _BulletSpawner = GetComponent<BulletSpawner>();
+
+            _HealthController = GetComponent<HealthController>();
+
+            _HealthController.LifeLost.AddListener(LifeLost);
+        }
+
+        private void LifeLost()
+        {
+            _HealthController.SetIgnoreBullets(3f);
         }
 
         // Update is called once per frame
@@ -39,7 +49,7 @@ namespace SafeSurfing
 
             _Vertical = IsPressingDown ? -1 : (IsPressingUp ? 1 : 0);
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (IsPressingSpace)
                 _BulletSpawner.Shoot();
             
             //// Game Manager can probably handle this
