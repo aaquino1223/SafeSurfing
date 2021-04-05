@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SafeSurfing
 {
+    [RequireComponent(typeof(HealthController))]
     public abstract class EnemyController : MonoBehaviour
     {
         public float Speed = 5f;
@@ -31,6 +33,11 @@ namespace SafeSurfing
 
         protected float _XMax;
         protected float _YMax;
+
+        private HealthController _HealthController;
+
+        public UnityEvent<int> Destroying;
+        public UnityEvent Destroyed;
         // Start is called before the first frame update
         void Start()
         {
@@ -46,7 +53,23 @@ namespace SafeSurfing
 
             _Pattern = CreateMovementPattern();
             _Current = 0;
+
+            _HealthController = GetComponent<HealthController>();
+            _HealthController.LifeLost.AddListener(OnLifeLost);
         }
+
+        private void OnLifeLost()
+        {
+            if (_HealthController.IsDead)
+            {
+                Destroying?.Invoke(0);
+                //Maybe play some animation
+                Destroyed?.Invoke();
+                Destroy(gameObject);
+            }
+
+        }
+
 
         // Update is called once per frame
         void Update()

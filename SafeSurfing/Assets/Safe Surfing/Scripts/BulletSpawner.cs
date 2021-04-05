@@ -31,7 +31,7 @@ namespace SafeSurfing
                 return;
 
             var bulletClone = Instantiate(BulletPrefab, transform.position + _Heading.Heading, transform.rotation, transform.parent);
-            bulletClone.tag = "Bullet"; // add Bullet tag to bullet clone so player collision can check for it (we can assign different enemies different bullet types perhaps)
+            //bulletClone.tag = "Bullet"; // add Bullet tag to bullet clone so player collision can check for it (we can assign different enemies different bullet types perhaps)
 
             var direction = bulletClone.transform.localPosition - transform.localPosition;
 

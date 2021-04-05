@@ -67,6 +67,8 @@ namespace SafeSurfing
             {
                 if (collision.CompareTag("Bounds"))
                     Destroy(gameObject, 0.1f);
+                else if (!collision.CompareTag(tag))
+                    Destroy(gameObject);
             }
         }
     }
