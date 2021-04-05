@@ -168,6 +168,7 @@ MonoBehaviour:
   Screen: {fileID: 643882706}
   EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
     type: 3}
+  Level: {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
 --- !u!1 &119216130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,10 +1190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9db0bff21fe2cc42b03149f94bf2f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LivesArray:
-  - {fileID: 1459585732}
-  - {fileID: 1188411660}
-  - {fileID: 153727720}
   Speed: 5
   FallSpeed: 2.5
 --- !u!114 &1085171968
@@ -1224,6 +1221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lives: 3
+  LifeLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1188411658
 GameObject:
   m_ObjectHideFlags: 0
