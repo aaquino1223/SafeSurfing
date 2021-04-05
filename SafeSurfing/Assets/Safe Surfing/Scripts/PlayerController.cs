@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using static SafeSurfing.Common.Constants.PlayerInput;
 
 namespace SafeSurfing
@@ -10,6 +12,9 @@ namespace SafeSurfing
     [RequireComponent(typeof(BulletSpawner))]
     public class PlayerController : MonoBehaviour, IHeading
     {
+        public int PlayerLives;
+        public Image[] LivesArray;
+
         public float Speed = 5f;
         public float FallSpeed = 2.5f;
 
@@ -27,6 +32,7 @@ namespace SafeSurfing
         void Start()
         {
             _BulletSpawner = GetComponent<BulletSpawner>();
+            PlayerLives = LivesArray.Length;
         }
 
         // Update is called once per frame
@@ -38,6 +44,13 @@ namespace SafeSurfing
 
             if (Input.GetKeyDown(KeyCode.Space))
                 _BulletSpawner.Shoot();
+            
+            // Game Manager can probably handle this
+            if (PlayerLives <= 0) 
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                // We can either restart level automatically or show GUI with final score + retry...
+            }
         }
 
         private void FixedUpdate()
@@ -52,6 +65,17 @@ namespace SafeSurfing
                 newPosition = new Vector3(localX, localY - FallSpeed * deltaTime, 0);
 
             transform.localPosition = newPosition;
+        }
+        
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Bullet"))
+            {
+                if (PlayerLives > 0) {
+                    PlayerLives--;
+                    LivesArray[PlayerLives].enabled = false;
+                }
+            }
         }
     }
 
