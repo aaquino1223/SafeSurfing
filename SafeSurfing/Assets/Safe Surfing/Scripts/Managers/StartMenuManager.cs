@@ -18,6 +18,7 @@ public class StartMenuManager : MonoBehaviour
         _TitleTheme = GetComponent<AudioSource>();
         _Transition = GetComponent<Animator>();
         _MenuCanvasGroup = GetComponent<CanvasGroup>();
+        _TitleTheme.volume = 0.5f;
         _TitleTheme.Play();
     }
 

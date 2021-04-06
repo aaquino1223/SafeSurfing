@@ -27,6 +27,8 @@ namespace SafeSurfing
         private BulletSpawner _BulletSpawner;
         private HealthController _HealthController;
 
+        public AudioSource DeathSound;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -39,6 +41,7 @@ namespace SafeSurfing
 
         private void LifeLost()
         {
+            DeathSound.Play();
             _HealthController.SetIgnoreBullets(3f);
         }
 

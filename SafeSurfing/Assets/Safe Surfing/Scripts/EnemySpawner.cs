@@ -17,6 +17,7 @@ namespace SafeSurfing
         //private float _EnemySpawnInterval = 3f;
 
         public GameObject EnemyPrefab;
+        public AudioSource SpawnSound;
 
         public LevelBehavior Level;
         private int _WaveIndex;
@@ -56,6 +57,7 @@ namespace SafeSurfing
 
             var enemyController = enemyClone.GetComponent<EnemyController>();
             enemyController.Screen = Screen;
+            SpawnSound.Play();
         }
 
         // Update is called once per frame

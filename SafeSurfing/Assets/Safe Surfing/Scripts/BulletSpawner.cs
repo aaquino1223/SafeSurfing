@@ -41,6 +41,8 @@ namespace SafeSurfing
             bulletController.Speed = BulletSpeed;
             bulletController.Direction = direction;
 
+            BulletPrefab.GetComponent<AudioSource>().Play();
+
             StartCoroutine(DisableShoot());
         }
 

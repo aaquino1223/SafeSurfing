@@ -30,6 +30,7 @@ namespace SafeSurfing
         }
 
         public GameObject Screen;
+        public AudioSource DeathSound;
 
         protected float _XMax;
         protected float _YMax;
@@ -63,9 +64,10 @@ namespace SafeSurfing
             if (_HealthController.IsDead)
             {
                 Destroying?.Invoke(0);
+                DeathSound.Play();
                 //Maybe play some animation
                 Destroyed?.Invoke();
-                Destroy(gameObject);
+                StartCoroutine(waitBeforeDestroy());
             }
 
         }
@@ -106,6 +108,12 @@ namespace SafeSurfing
         protected virtual void OnPatternCompleted()
         {
 
+        }
+
+        private IEnumerator<WaitForSeconds> waitBeforeDestroy(){
+            yield return new WaitForSeconds(0.25f);
+            
+            Destroy(gameObject);
         }
 
         protected abstract IEnumerable<Vector3> CreateMovementPattern();
