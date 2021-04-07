@@ -34,3 +34,65 @@ MonoBehaviour:
       EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       DeathSound: {fileID: 0}
+  - SpawnPoints:
+    - Time: 2
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 10
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 15
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 20
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 25
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+        type: 3}
+      DeathSound: {fileID: 0}
+  - SpawnPoints:
+    - Time: 2
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 4
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 8
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 12
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 17
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 20
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 25
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 30
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 32
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+        type: 3}
+      DeathSound: {fileID: 0}
+    - Time: 34
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+        type: 3}
+      DeathSound: {fileID: 0}

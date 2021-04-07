@@ -15,9 +15,10 @@ namespace SafeSurfing
         private float _YMax;
 
         public UnityEvent EnemySpawned;
+        public UnityEvent WaveChanged;
 
         public LevelBehavior Level;
-        private int _WaveIndex = -1;
+        public int WaveIndex = -1;
         private int _EnemyDestroyed = 0;
 
         private List<SpawnPoint> _SpawnPoints;
@@ -37,13 +38,15 @@ namespace SafeSurfing
 
         private void NextWave()
         {
-            _WaveIndex++;
-            if (Level == null || _WaveIndex >= Level.Waves.Count())
+            WaveIndex++;
+            WaveChanged?.Invoke();
+
+            if (Level == null || WaveIndex >= Level.Waves.Count())
                 return;
 
             _EnemyDestroyed = 0;
 
-            _SpawnPoints = Level.Waves[_WaveIndex].SpawnPoints.ToList();
+            _SpawnPoints = Level.Waves[WaveIndex].SpawnPoints.ToList();
             foreach (var spawnPoint in _SpawnPoints)
             {
                 UnityAction action = () =>

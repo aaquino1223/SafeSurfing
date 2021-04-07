@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using TMPro;
 
 namespace SafeSurfing
 {
@@ -10,6 +12,18 @@ namespace SafeSurfing
         public Image[] Lives;
         public GameObject Player;
         private HealthController _HealthController;
+        public EnemySpawner Spawner;
+
+        //Level variable
+        //Score variable
+        public TextMeshProUGUI WaveText;
+        public TextMeshProUGUI LevelText;
+        public TextMeshProUGUI ScoreText;
+
+        public UnityEvent WaveChanged;
+        public UnityEvent LevelChanged;
+        public UnityEvent ScoreChanged;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -29,10 +43,30 @@ namespace SafeSurfing
             Lives[_HealthController.Lives].enabled = false;
         }
 
+        public void OnWaveChanged()
+        {
+            //comes from enemyspawner
+            var waveNum = Spawner.WaveIndex + 1;
+            WaveText.text = "Wave " + waveNum;
+        }
+
+        private void OnLevelChanged()
+        {
+            // Add Level variable
+            // LevelText.text = "Level " + Level;
+        }
+
+        private void OnScoreChanged()
+        {
+            // Add Score variable
+            // ScoreText.text = "Score: " + Score;
+        }
+
+
         // Update is called once per frame
         void Update()
         {
-            
+
         }
     }
 }
