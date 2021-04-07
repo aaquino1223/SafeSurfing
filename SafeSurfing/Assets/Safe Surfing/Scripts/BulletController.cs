@@ -67,7 +67,7 @@ namespace SafeSurfing
             {
                 if (collision.CompareTag("Bounds"))
                     Destroy(gameObject, 0.1f);
-                else if (!collision.CompareTag(tag))
+                else if (!collision.CompareTag(tag) && !collision.CompareTag(Parent.tag))
                 {
                     var healthController = collision.gameObject.GetComponent<HealthController>();
 

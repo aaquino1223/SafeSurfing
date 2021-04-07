@@ -20,4 +20,5 @@ public class SpawnPoint
 {
     public float Time;
     public GameObject EnemyPrefab;
+    public AudioClip DeathSound;
 }

@@ -21,7 +21,7 @@ namespace SafeSurfing
 
             _HealthController = Player.GetComponent<HealthController>();
             if (_HealthController != null)
-                _HealthController.LifeLost.AddListener(OnPlayerLifeLost);
+                _HealthController.AddLifeLostListener(OnPlayerLifeLost, true);
         }
 
         private void OnPlayerLifeLost()

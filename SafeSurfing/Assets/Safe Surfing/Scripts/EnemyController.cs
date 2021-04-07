@@ -1,4 +1,5 @@
-﻿using SafeSurfing.Common.Enums;
+﻿using SafeSurfing.Common;
+using SafeSurfing.Common.Enums;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -24,13 +25,12 @@ namespace SafeSurfing
                 if (_State != value)
                 {
                     _State = value;
-                    _Pattern = CreateMovementPattern();
+                    SetPattern();
                 }
             }
         }
 
         public GameObject Screen;
-        public AudioSource DeathSound;
 
         protected float _XMax;
         protected float _YMax;
@@ -64,10 +64,10 @@ namespace SafeSurfing
             if (_HealthController.IsDead)
             {
                 Destroying?.Invoke(0);
-                DeathSound.Play();
                 //Maybe play some animation
                 Destroyed?.Invoke();
-                StartCoroutine(waitBeforeDestroy());
+
+                Destroy(gameObject);
             }
 
         }
@@ -81,12 +81,6 @@ namespace SafeSurfing
 
         private void FixedUpdate()
         {
-            VirtualFixedUpdate();
-        }
-
-        protected virtual void VirtualFixedUpdate()
-        {
-
             if (_Pattern == null || _Pattern.Count() == 0)
                 return;
 
@@ -110,13 +104,34 @@ namespace SafeSurfing
 
         }
 
-        private IEnumerator<WaitForSeconds> waitBeforeDestroy(){
-            yield return new WaitForSeconds(0.25f);
-            
-            Destroy(gameObject);
+        protected void SetPattern()
+        {
+            _Pattern = CreateMovementPattern();
         }
 
         protected abstract IEnumerable<Vector3> CreateMovementPattern();
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (State != EnemyState.Normal)
+                return;
+
+            if (collision.CompareTag("Bounds"))
+            {
+                //Set points to 0
+                StartCoroutine(Util.TimedAction(OnDestroying, OnDestroyed, 0.5f));
+            }
+        }
+        
+        private void OnDestroying()
+        {
+            Destroying?.Invoke(0);
+        }
+        private void OnDestroyed()
+        {
+            Destroyed?.Invoke();
+            Destroy(gameObject);
+        }
     }
 }
 

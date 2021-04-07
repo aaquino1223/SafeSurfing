@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using SafeSurfing.Common;
+using UnityEngine.Events;
 
 namespace SafeSurfing
 {
@@ -12,15 +14,11 @@ namespace SafeSurfing
         private float _XMax;
         private float _YMax;
 
-        //private float _StartTime;
-        //private float _ElapsedTime;
-        //private float _EnemySpawnInterval = 3f;
-
-        public GameObject EnemyPrefab;
-        public AudioSource SpawnSound;
+        public UnityEvent EnemySpawned;
 
         public LevelBehavior Level;
-        private int _WaveIndex;
+        private int _WaveIndex = -1;
+        private int _EnemyDestroyed = 0;
 
         private List<SpawnPoint> _SpawnPoints;
         // Start is called before the first frame update
@@ -34,70 +32,46 @@ namespace SafeSurfing
 
             //_StartTime = Time.fixedTime;
 
+            NextWave();
+        }
 
-            if (Level != null && Level.Waves.Count() > 0)
+        private void NextWave()
+        {
+            _WaveIndex++;
+            if (Level == null || _WaveIndex >= Level.Waves.Count())
+                return;
+
+            _EnemyDestroyed = 0;
+
+            _SpawnPoints = Level.Waves[_WaveIndex].SpawnPoints.ToList();
+            foreach (var spawnPoint in _SpawnPoints)
             {
-                _SpawnPoints = Level.Waves[_WaveIndex].SpawnPoints.ToList();
-                foreach (var spawnPoint in _SpawnPoints)
-                    StartCoroutine(SpawnEnemy(spawnPoint.Time, spawnPoint.EnemyPrefab));
-                //TODO: Swap and load new spawn points when all enemies destroyed
+                UnityAction action = () =>
+                {
+                    var xPos = Random.Range(-_XMax + 1, _XMax - 1);
+
+                    var spawnPosition = Quaternion.Euler(transform.rotation.eulerAngles) * new Vector3(xPos, _YMax + 1, 0);
+
+                    var enemyClone = Instantiate(spawnPoint.EnemyPrefab, spawnPosition, transform.rotation, transform);
+
+                    var enemyController = enemyClone.GetComponent<EnemyController>();
+                    enemyController.Screen = Screen;
+                    enemyController.Destroyed.AddListener(EnemyDestroyed);
+
+                    EnemySpawned?.Invoke();
+                }; 
+
+                StartCoroutine(Util.TimedAction(null, action, spawnPoint.Time));
             }
         }
 
-        private IEnumerator SpawnEnemy(float time, GameObject prefab)
+
+        private void EnemyDestroyed()
         {
-            yield return new WaitForSeconds(time);
+            _EnemyDestroyed++;
 
-            var xPos = Random.Range(-_XMax + 1, _XMax - 1);
-
-            var spawnPosition = Quaternion.Euler(transform.rotation.eulerAngles) * new Vector3(xPos, _YMax + 1, 0);
-
-
-            var enemyClone = Instantiate(prefab, spawnPosition, transform.rotation, transform);
-
-            var enemyController = enemyClone.GetComponent<EnemyController>();
-            enemyController.Screen = Screen;
-            SpawnSound.Play();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            //var time = _ElapsedTime - _StartTime;
-
-            //var spawnPointsToRemove = new List<SpawnPoint>();
-            //foreach (var spawnPoint in _SpawnPoints)
-            //{
-            //    if (time >= spawnPoint.Time)
-            //    {
-            //        var xPos = Random.Range(-_XMax + 1, _XMax - 1);
-
-            //        var spawnPosition = Quaternion.Euler(transform.rotation.eulerAngles) * new Vector3(xPos, _YMax + 1, 0);
-
-
-            //        var enemyClone = Instantiate(EnemyPrefab, spawnPosition, transform.rotation, transform);
-
-
-
-            //        var enemyController = enemyClone.GetComponent<EnemyController>();
-            //        enemyController.Screen = Screen;
-
-            //        spawnPointsToRemove.Add(spawnPoint);
-            //    }
-            //}
-
-            //spawnPointsToRemove.ForEach(x => _SpawnPoints.Remove(x));
-            //if (time > _EnemySpawnInterval)
-            //{
-            //    _StartTime = _ElapsedTime;
-
-                
-            //}
-        }
-
-        private void FixedUpdate()
-        {
-            //_ElapsedTime = Time.fixedTime;
+            if (_EnemyDestroyed == _SpawnPoints.Count)
+                NextWave();
         }
     }
 }

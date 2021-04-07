@@ -1,52 +1,62 @@
-﻿using System;
+﻿using SafeSurfing.Common;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HealthController : MonoBehaviour
+namespace SafeSurfing
 {
-    public int Lives = 3;
-
-    public UnityEvent LifeLost;
-
-    public bool IsDead => Lives == 0;
-    public bool IsIgnoringBullets { get; private set; }
-
-    public void SetIgnoreBullets(float ignoreTime)
+    public class HealthController : MonoBehaviour
     {
-        StartCoroutine(IgnoreBullets(ignoreTime));
-    }
+        public int Lives = 3;
 
-    private IEnumerator IgnoreBullets(float time)
-    {
-        IsIgnoringBullets = true;
-        yield return new WaitForSeconds(time);
-        IsIgnoringBullets = false;
-    }
+        public UnityEvent LifeLost;
+        public UnityEvent AllLivesLost;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        public bool IsDead => Lives == 0;
+        public bool IsIgnoringBullets { get; private set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Bullet") && !IsIgnoringBullets)
+        public void SetIgnoreBullets(float ignoreTime)
         {
-            if (!IsDead)
+            StartCoroutine(Util.TimedAction(
+                () => IsIgnoringBullets = true,
+                () => IsIgnoringBullets = false,
+                ignoreTime
+                ));
+        }
+
+        public void AddLifeLostListener(UnityAction unityAction, bool includeAllLivesLost = false)
+        {
+            LifeLost.AddListener(unityAction);
+            if (includeAllLivesLost)
+                AllLivesLost.AddListener(unityAction);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Bullet") && !IsIgnoringBullets)
             {
-                Lives--;
-                LifeLost?.Invoke();
+                //Prevent friendly fire
+                {
+                    var bulletController = collision.gameObject.GetComponent<BulletController>();
+
+                    if (bulletController.Parent.CompareTag(tag))
+                        return;
+                }
+
+                if (!IsDead)
+                {
+                    Lives--;
+                    LifeLost?.Invoke();
+
+                    if (IsDead)
+                        AllLivesLost?.Invoke();
+                    else
+                        LifeLost?.Invoke();
+                }
+
             }
-                
         }
     }
 }

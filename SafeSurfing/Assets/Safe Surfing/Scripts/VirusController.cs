@@ -12,16 +12,11 @@ namespace SafeSurfing
     {
         public Vector3 Heading => -transform.up;
 
-        //private float _StartTime;
-        //private float _ElapsedTime;
-        //private float _BulletSpawnInterval = 2f;
-
         private BulletSpawner _BulletSpawner;
 
         protected override void Initialize()
         {
             base.Initialize();
-            //_StartTime = Time.fixedTime;
             _BulletSpawner = GetComponent<BulletSpawner>();
         }
 
@@ -30,20 +25,7 @@ namespace SafeSurfing
         {
             if (State == EnemyState.Normal)
                 _BulletSpawner.Shoot();
-            //var time = _ElapsedTime - _StartTime;
-            //if (time > _BulletSpawnInterval)
-            //{
-            //    _StartTime = _ElapsedTime;
-
-            //    _BulletSpawner.Shoot();
-            //}
         }
-
-        //protected override void VirtualFixedUpdate()
-        //{
-        //    _ElapsedTime = Time.fixedTime;
-        //    base.VirtualFixedUpdate();
-        //}
 
         protected override IEnumerable<Vector3> CreateMovementPattern()
         {

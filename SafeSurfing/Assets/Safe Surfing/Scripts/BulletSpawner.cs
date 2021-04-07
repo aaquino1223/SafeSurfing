@@ -1,12 +1,16 @@
-﻿using SafeSurfing.Common.Interfaces;
+﻿using SafeSurfing.Common;
+using SafeSurfing.Common.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SafeSurfing 
 {
     public class BulletSpawner : MonoBehaviour
     {
+        public UnityEvent BulletSpawned;
+
         public GameObject BulletPrefab;
         public float BulletSpeed = 10f;
         public float FiringRate = 0.5f;
@@ -41,16 +45,13 @@ namespace SafeSurfing
             bulletController.Speed = BulletSpeed;
             bulletController.Direction = direction;
 
-            BulletPrefab.GetComponent<AudioSource>().Play();
+            BulletSpawned?.Invoke();
 
-            StartCoroutine(DisableShoot());
-        }
-
-        private IEnumerator DisableShoot()
-        {
-            _ReadyToShoot = false;
-            yield return new WaitForSeconds(FiringRate);
-            _ReadyToShoot = true;
+            StartCoroutine(Util.TimedAction(
+                () => _ReadyToShoot = false, 
+                () => _ReadyToShoot = true, 
+                FiringRate
+                ));
         }
     }
 }
