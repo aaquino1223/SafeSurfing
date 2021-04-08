@@ -4,10 +4,12 @@ using UnityEngine;
 using System.Linq;
 using SafeSurfing.Common;
 using UnityEngine.Events;
+using SafeSurfing.Common.Enums;
+using System;
 
 namespace SafeSurfing
 {
-    public class EnemySpawner : MonoBehaviour
+    public class GameManager : MonoBehaviour
     {
         public GameObject Screen;
 
@@ -25,6 +27,9 @@ namespace SafeSurfing
 
         private int _EnemyDestroyed = 0;
         private int _ExpectedSpawnCount = 0;
+
+        private PickUpType _PickUpType;
+
         public int Score { get; private set; } = 0;
 
         // Start is called before the first frame update
@@ -47,6 +52,8 @@ namespace SafeSurfing
             if (Levels == null || LevelIndex >= Levels.Count())
                 return;
 
+            _PickUpType = Levels[LevelIndex].PickUpType;
+
             NextWave();
         }
 
@@ -66,7 +73,7 @@ namespace SafeSurfing
             {
                 UnityAction action = () =>
                 {
-                    var xPos = Random.Range(-_XMax + 1, _XMax - 1);
+                    var xPos = UnityEngine.Random.Range(-_XMax + 1, _XMax - 1);
 
                     var spawnPosition = Quaternion.Euler(transform.rotation.eulerAngles) * new Vector3(xPos, _YMax + 1, 0);
 
@@ -82,6 +89,26 @@ namespace SafeSurfing
                 StartCoroutine(Util.TimedAction(null, action, spawnPoint.Time));
             }
         }
+
+        //private IEnumerator SpawnPickups()
+        //{
+        //    var possiblePickUpTypes = new List<PickUpType>();
+
+        //    foreach (var pickUpType in Enum.GetValues(typeof(PickUpType)).Cast<PickUpType>())
+        //        if (_PickUpType.HasFlag(pickUpType))
+        //            possiblePickUpTypes.Add(pickUpType);
+
+        //    //float currentTime = 0;
+        //    //float start = audioSource.volume;
+
+        //    //while (currentTime < duration)
+        //    //{
+        //    //    currentTime += Time.deltaTime;
+        //    //    audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+        //    //    yield return null;
+        //    //}
+        //    //yield break;
+        //}
        
         private void EnemyDestroyed(object sender, int points)
         {

@@ -1,4 +1,6 @@
-﻿using SafeSurfing.Common.Interfaces;
+﻿using SafeSurfing.Common;
+using SafeSurfing.Common.Enums;
+using SafeSurfing.Common.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,8 +77,6 @@ namespace SafeSurfing
 
         public void SetFiringRate(float firingRate){
             _BulletSpawner.FiringRate = firingRate;
-
-            Debug.Log(_BulletSpawner.FiringRate);
         }
 
         public void SetBulletSpeed(float bulletSpeed){
@@ -89,7 +89,25 @@ namespace SafeSurfing
 
             if (collision.CompareTag("Enemy") && !IsIgnoringDamage)
                 OnDamaged();
+            else if (collision.CompareTag("Pickup"))
+            {
+                var pickUp = collision.gameObject.GetComponent<PickUpController>();
+                
+                switch (pickUp.PickUpType)
+                {
+                    case PickUpType.FiringRate:
+                        StartCoroutine(Util.TimedAction(() => SetFiringRate(0.25f), () => SetFiringRate(0.5f), pickUp.EffectDuration));
+                        break;
+                    case PickUpType.BulletSpeed:
+                        break;
+                    case PickUpType.MoveSpeed:
+                        break;
+                    case PickUpType.Special:
+                        break;
+                }
 
+                pickUp.Consumed();
+            }
         }
 
     }

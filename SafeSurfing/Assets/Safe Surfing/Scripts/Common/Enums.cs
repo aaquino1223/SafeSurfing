@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,12 +11,13 @@ namespace SafeSurfing.Common.Enums
         Normal
     }
 
+    [Flags]
     public enum PickUpType
     {
-        None,
-        BulletSpeed,
-        FiringRate,
-        MoveSpeed,
-        Special
+        BulletSpeed = 1 << 0,
+        FiringRate = 1 << 1,
+        MoveSpeed = 1 << 2,
+        Special = 1 << 3,
+        Trojan = 1 << 4
     }
 }

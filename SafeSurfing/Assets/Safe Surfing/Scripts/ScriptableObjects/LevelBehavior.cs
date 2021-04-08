@@ -1,23 +1,28 @@
-﻿using System;
+﻿using SafeSurfing.Common.Enums;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class LevelBehavior : ScriptableObject
+namespace SafeSurfing 
 {
-    public Wave[] Waves;
-}
+    [CreateAssetMenu]
+    public class LevelBehavior : ScriptableObject
+    {
+        public Wave[] Waves;
+        public PickUpType PickUpType; 
+    }
 
-[Serializable]
-public class Wave
-{
-    public SpawnPoint[] SpawnPoints;
-}
+    [Serializable]
+    public class Wave
+    {
+        public SpawnPoint[] SpawnPoints;
+    }
 
-[Serializable]
-public class SpawnPoint
-{
-    public float Time;
-    public GameObject EnemyPrefab;
+    [Serializable]
+    public class SpawnPoint
+    {
+        public float Time;
+        public GameObject EnemyPrefab;
+    }
 }

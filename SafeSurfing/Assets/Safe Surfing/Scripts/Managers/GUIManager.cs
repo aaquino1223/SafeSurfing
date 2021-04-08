@@ -12,7 +12,7 @@ namespace SafeSurfing
         public Image[] Lives;
         public GameObject Player;
         private HealthController _HealthController;
-        public EnemySpawner Spawner;
+        public GameManager Spawner;
 
         //Level variable
         //Score variable

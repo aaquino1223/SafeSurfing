@@ -48,6 +48,9 @@ namespace SafeSurfing
 
         protected virtual void Initialize()
         {
+            if (Screen == null)
+                Screen = GameObject.FindGameObjectWithTag("Bounds");
+
             var collider = Screen.GetComponent<EdgeCollider2D>();
 
             _XMax = collider.points.Max(point => point.x);
