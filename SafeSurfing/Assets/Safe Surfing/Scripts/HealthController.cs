@@ -15,13 +15,13 @@ namespace SafeSurfing
         public UnityEvent AllLivesLost;
 
         public bool IsDead => Lives == 0;
-        public bool IsIgnoringBullets { get; private set; }
+        public bool IsIgnoringDamage { get; private set; }
 
         public void SetIgnoreBullets(float ignoreTime)
         {
             StartCoroutine(Util.TimedAction(
-                () => IsIgnoringBullets = true,
-                () => IsIgnoringBullets = false,
+                () => IsIgnoringDamage = true,
+                () => IsIgnoringDamage = false,
                 ignoreTime
                 ));
         }
@@ -35,27 +35,36 @@ namespace SafeSurfing
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Bullet") && !IsIgnoringBullets)
+            OnTriggerCollison(collision);
+        }
+
+        protected virtual void OnTriggerCollison(Collider2D collision)
+        {
+            if (collision.CompareTag("Bullet") && !IsIgnoringDamage)
             {
                 //Prevent friendly fire
                 {
                     var bulletController = collision.gameObject.GetComponent<BulletController>();
 
-                    if (bulletController.Parent.CompareTag(tag))
+                    if (bulletController.ParentTag == tag)
                         return;
                 }
 
-                if (!IsDead)
-                {
-                    Lives--;
+                OnDamaged();
+            }
+        }
+
+        protected void OnDamaged()
+        {
+            if (!IsDead)
+            {
+                Lives--;
+                LifeLost?.Invoke();
+
+                if (IsDead)
+                    AllLivesLost?.Invoke();
+                else
                     LifeLost?.Invoke();
-
-                    if (IsDead)
-                        AllLivesLost?.Invoke();
-                    else
-                        LifeLost?.Invoke();
-                }
-
             }
         }
     }

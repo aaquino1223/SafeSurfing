@@ -14,9 +14,14 @@ namespace SafeSurfing
             set
             {
                 if (_Parent != value)
+                {
                     _Parent = value;
+                    ParentTag = _Parent?.tag;
+                }
             }
         }
+
+        public string ParentTag { get; private set; }
 
         private float _Speed;
         public float Speed
@@ -67,11 +72,11 @@ namespace SafeSurfing
             {
                 if (collision.CompareTag("Bounds"))
                     Destroy(gameObject, 0.1f);
-                else if (!collision.CompareTag(tag) && !collision.CompareTag(Parent.tag))
+                else if (!collision.CompareTag(tag) && !collision.CompareTag(ParentTag))
                 {
                     var healthController = collision.gameObject.GetComponent<HealthController>();
 
-                    if (healthController?.IsIgnoringBullets != true)
+                    if (healthController?.IsIgnoringDamage != true)
                         Destroy(gameObject);
                 }
             }

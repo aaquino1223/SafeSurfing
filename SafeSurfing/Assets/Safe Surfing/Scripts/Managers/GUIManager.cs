@@ -62,7 +62,7 @@ namespace SafeSurfing
         private void OnScoreChanged()
         {
             // Add Score variable
-            // ScoreText.text = "Score: " + Score;
+           ScoreText.text = "Score: " + Spawner.Score;
         }
 
 

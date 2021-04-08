@@ -184,39 +184,15 @@ MonoBehaviour:
         m_CallState: 2
   WaveChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1212191419}
-        m_MethodName: OnWaveChanged
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ScoreChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1212191419}
-        m_MethodName: OnScoreChanged
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   LevelChanged:
     m_PersistentCalls:
       m_Calls: []
-  Level: {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
-  WaveIndex: -1
-  _EnemyDestroyed: 0
-  TotalScore: 0
+  ScoreChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  Levels:
+  - {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
 --- !u!82 &1609701
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1983,6 +1959,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9db0bff21fe2cc42b03149f94bf2f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lives: 3
+  LifeLost:
+    m_PersistentCalls:
+      m_Calls: []
+  AllLivesLost:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1f16a3507b618e341beb073be177d55e, type: 2}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 3f6075a50fef9401294198893931c12a,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Speed: 5
   FallSpeed: 2.5
 --- !u!114 &1085171968

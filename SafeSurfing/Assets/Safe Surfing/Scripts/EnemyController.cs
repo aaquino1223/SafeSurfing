@@ -1,5 +1,6 @@
 ﻿using SafeSurfing.Common;
 using SafeSurfing.Common.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,9 +9,10 @@ using UnityEngine.Events;
 namespace SafeSurfing
 {
     [RequireComponent(typeof(HealthController))]
-    public abstract class EnemyController : MonoBehaviour
+    public abstract class EnemyController : HealthController
     {
         public float Speed = 5f;
+        public int Points;
 
         private IEnumerable<Vector3> _Pattern;
         private int _Current;
@@ -35,10 +37,9 @@ namespace SafeSurfing
         protected float _XMax;
         protected float _YMax;
 
-        private HealthController _HealthController;
+        //private HealthController _HealthController;
 
-        public UnityEvent<int> Destroying;
-        public UnityEvent Destroyed;
+        public event EventHandler<int> Destroyed;
         // Start is called before the first frame update
         void Start()
         {
@@ -55,21 +56,14 @@ namespace SafeSurfing
             _Pattern = CreateMovementPattern();
             _Current = 0;
 
-            _HealthController = GetComponent<HealthController>();
-            _HealthController.LifeLost.AddListener(OnLifeLost);
+            //_HealthController = GetComponent<HealthController>();
+            AddLifeLostListener(OnLifeLost);
         }
 
         private void OnLifeLost()
         {
-            if (_HealthController.IsDead)
-            {
-                Destroying?.Invoke(0);
-                //Maybe play some animation
-                Destroyed?.Invoke();
-
-                Destroy(gameObject);
-            }
-
+            if (IsDead)
+                OnDestroyed();
         }
 
 
@@ -111,25 +105,22 @@ namespace SafeSurfing
 
         protected abstract IEnumerable<Vector3> CreateMovementPattern();
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        protected override void OnTriggerCollison(Collider2D collision)
         {
+            base.OnTriggerCollison(collision);
+
             if (State != EnemyState.Normal)
                 return;
 
             if (collision.CompareTag("Bounds"))
             {
-                //Set points to 0
-                StartCoroutine(Util.TimedAction(OnDestroying, OnDestroyed, 0.5f));
+                Points = 0;
+                StartCoroutine(Util.TimedAction(null, OnDestroyed, 0.5f));
             }
-        }
-        
-        private void OnDestroying()
-        {
-            Destroying?.Invoke(0);
         }
         private void OnDestroyed()
         {
-            Destroyed?.Invoke();
+            Destroyed?.Invoke(this, Points);
             Destroy(gameObject);
         }
     }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3496359801612778440}
   m_Layer: 0
   m_Name: Worm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,11 +129,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18ce0009092a444f974494d1d83c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
-  Screen: {fileID: 0}
-  Destroyed:
+  Lives: 1
+  LifeLost:
     m_PersistentCalls:
       m_Calls: []
+  AllLivesLost:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1f16a3507b618e341beb073be177d55e, type: 2}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: fb80d6e5e6f994938a183b1f2a8625a2,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Speed: 3
+  Points: 5
+  Screen: {fileID: 0}
   PlayerTransform: {fileID: 0}
 --- !u!50 &3496359801612778447
 Rigidbody2D:

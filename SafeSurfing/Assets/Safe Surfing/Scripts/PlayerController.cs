@@ -11,7 +11,7 @@ namespace SafeSurfing
 {
     [RequireComponent(typeof(BulletSpawner))]
     [RequireComponent(typeof(HealthController))]
-    public class PlayerController : MonoBehaviour, IHeading
+    public class PlayerController : HealthController, IHeading
     {
         public float Speed = 5f;
         public float FallSpeed = 2.5f;
@@ -25,21 +25,21 @@ namespace SafeSurfing
         private float _Vertical;
 
         private BulletSpawner _BulletSpawner;
-        private HealthController _HealthController;
+        //private HealthController _HealthController;
 
         // Start is called before the first frame update
         void Start()
         {
             _BulletSpawner = GetComponent<BulletSpawner>();
 
-            _HealthController = GetComponent<HealthController>();
+            //_HealthController = GetComponent<HealthController>();
 
-            _HealthController.AddLifeLostListener(LifeLost);
+            AddLifeLostListener(OnLifeLost);
         }
 
-        private void LifeLost()
+        private void OnLifeLost()
         {
-            _HealthController.SetIgnoreBullets(3f);
+            SetIgnoreBullets(3f);
         }
 
         // Update is called once per frame
@@ -72,6 +72,14 @@ namespace SafeSurfing
                 newPosition = new Vector3(localX, localY - FallSpeed * deltaTime, 0);
 
             transform.localPosition = newPosition;
+        }
+
+        protected override void OnTriggerCollison(Collider2D collision)
+        {
+            base.OnTriggerCollison(collision);
+
+            if (collision.CompareTag("Enemy") && !IsIgnoringDamage)
+                OnDamaged();
         }
     }
 

@@ -9,4 +9,12 @@ namespace SafeSurfing.Common.Enums
         Spawned,
         Normal
     }
+
+    public enum PickUpType
+    {
+        None,
+        BulletSpeed,
+        MoveSpeed,
+        Special
+    }
 }

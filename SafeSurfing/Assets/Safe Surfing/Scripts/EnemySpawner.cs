@@ -16,12 +16,16 @@ namespace SafeSurfing
 
         public UnityEvent EnemySpawned;
         public UnityEvent WaveChanged;
-        public UnityEvent ScoreChanged;
         public UnityEvent LevelChanged;
+        public UnityEvent ScoreChanged;
 
-        public LevelBehavior Level;
-        public int WaveIndex = -1;
+        public LevelBehavior[] Levels;
+        public int WaveIndex { get; private set; } = -1;
+        public int LevelIndex { get; private set; } = -1;
+
         private int _EnemyDestroyed = 0;
+        private int _ExpectedSpawnCount = 0;
+        public int Score { get; private set; } = 0;
 
         // Start is called before the first frame update
         void Start()
@@ -32,7 +36,16 @@ namespace SafeSurfing
             _XMax = collider.points.Max(point => point.x);
             _YMax = collider.points.Max(point => point.y);
 
-            //_StartTime = Time.fixedTime;
+            NextLevel();
+        }
+
+        private void NextLevel()
+        {
+            LevelIndex++;
+            LevelChanged?.Invoke();
+
+            if (Levels == null || LevelIndex >= Levels.Count())
+                return;
 
             NextWave();
         }
@@ -42,12 +55,14 @@ namespace SafeSurfing
             WaveIndex++;
             WaveChanged?.Invoke();
 
-            if (Level == null || WaveIndex >= Level.Waves.Count())
+            var waves = Levels[LevelIndex]?.Waves;
+            if (waves == null || WaveIndex >= waves.Count())
                 return;
 
             _EnemyDestroyed = 0;
 
-            foreach (var spawnPoint in Level.Waves[WaveIndex].SpawnPoints)
+            _ExpectedSpawnCount = waves[WaveIndex].SpawnPoints.Count();
+            foreach (var spawnPoint in waves[WaveIndex].SpawnPoints)
             {
                 UnityAction action = () =>
                 {
@@ -59,24 +74,29 @@ namespace SafeSurfing
 
                     var enemyController = enemyClone.GetComponent<EnemyController>();
                     enemyController.Screen = Screen;
-                    enemyController.Destroyed.AddListener(EnemyDestroyed);
+                    enemyController.Destroyed += EnemyDestroyed;
 
                     EnemySpawned?.Invoke();
-                }; 
+                };
 
                 StartCoroutine(Util.TimedAction(null, action, spawnPoint.Time));
             }
         }
-
-
-        private void EnemyDestroyed()
+       
+        private void EnemyDestroyed(object sender, int points)
         {
             _EnemyDestroyed++;
 
+            Score += points;
             ScoreChanged?.Invoke();
-            if (_EnemyDestroyed == Level.Waves[WaveIndex].SpawnPoints.Count()) 
+
+            if (_EnemyDestroyed == _ExpectedSpawnCount)
             {
-                NextWave();
+                if (WaveIndex < Levels[LevelIndex].Waves.Count() - 1)
+                    NextWave();
+                else if (LevelIndex < Levels.Count() - 1)
+                    NextLevel(); //TODO: Else they won, go to final screen
             }
         }
     }
+}
