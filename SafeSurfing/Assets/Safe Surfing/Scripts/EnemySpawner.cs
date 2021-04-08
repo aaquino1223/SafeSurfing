@@ -16,12 +16,13 @@ namespace SafeSurfing
 
         public UnityEvent EnemySpawned;
         public UnityEvent WaveChanged;
+        public UnityEvent ScoreChanged;
+        public UnityEvent LevelChanged;
 
         public LevelBehavior Level;
         public int WaveIndex = -1;
         private int _EnemyDestroyed = 0;
 
-        private List<SpawnPoint> _SpawnPoints;
         // Start is called before the first frame update
         void Start()
         {
@@ -46,8 +47,7 @@ namespace SafeSurfing
 
             _EnemyDestroyed = 0;
 
-            _SpawnPoints = Level.Waves[WaveIndex].SpawnPoints.ToList();
-            foreach (var spawnPoint in _SpawnPoints)
+            foreach (var spawnPoint in Level.Waves[WaveIndex].SpawnPoints)
             {
                 UnityAction action = () =>
                 {
@@ -73,8 +73,10 @@ namespace SafeSurfing
         {
             _EnemyDestroyed++;
 
-            if (_EnemyDestroyed == _SpawnPoints.Count)
+            ScoreChanged?.Invoke();
+            if (_EnemyDestroyed == Level.Waves[WaveIndex].SpawnPoints.Count()) 
+            {
                 NextWave();
+            }
         }
     }
-}

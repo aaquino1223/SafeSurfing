@@ -196,8 +196,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ScoreChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1212191419}
+        m_MethodName: OnScoreChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  LevelChanged:
+    m_PersistentCalls:
+      m_Calls: []
   Level: {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
   WaveIndex: -1
+  _EnemyDestroyed: 0
+  TotalScore: 0
 --- !u!82 &1609701
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1785,7 +1804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &967795222
 Transform:
   m_ObjectHideFlags: 0
@@ -2046,7 +2065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1088801505
 Transform:
   m_ObjectHideFlags: 0
@@ -2353,26 +2372,6 @@ MonoBehaviour:
   WaveText: {fileID: 254169792}
   LevelText: {fileID: 582660395}
   ScoreText: {fileID: 1388354153}
-  WaveChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1212191414}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  LevelChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  ScoreChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1228549278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,7 +2476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1252654650
 RectTransform:
   m_ObjectHideFlags: 0

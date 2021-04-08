@@ -20,10 +20,6 @@ namespace SafeSurfing
         public TextMeshProUGUI LevelText;
         public TextMeshProUGUI ScoreText;
 
-        public UnityEvent WaveChanged;
-        public UnityEvent LevelChanged;
-        public UnityEvent ScoreChanged;
-
         // Start is called before the first frame update
         void Start()
         {
@@ -36,6 +32,13 @@ namespace SafeSurfing
             _HealthController = Player.GetComponent<HealthController>();
             if (_HealthController != null)
                 _HealthController.AddLifeLostListener(OnPlayerLifeLost, true);
+
+            if(Spawner != null)
+            {
+                Spawner.WaveChanged.AddListener(OnWaveChanged);
+                Spawner.LevelChanged.AddListener(OnLevelChanged);
+                Spawner.ScoreChanged.AddListener(OnScoreChanged);
+            }
         }
 
         private void OnPlayerLifeLost()
@@ -43,7 +46,7 @@ namespace SafeSurfing
             Lives[_HealthController.Lives].enabled = false;
         }
 
-        public void OnWaveChanged()
+        private void OnWaveChanged()
         {
             //comes from enemyspawner
             var waveNum = Spawner.WaveIndex + 1;
