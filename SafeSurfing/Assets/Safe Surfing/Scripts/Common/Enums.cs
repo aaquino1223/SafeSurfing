@@ -14,6 +14,7 @@ namespace SafeSurfing.Common.Enums
     {
         None,
         BulletSpeed,
+        FiringRate,
         MoveSpeed,
         Special
     }

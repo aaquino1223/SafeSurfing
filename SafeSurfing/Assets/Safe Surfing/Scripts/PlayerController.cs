@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using static SafeSurfing.Common.Constants.PlayerInput;
 
@@ -74,13 +73,25 @@ namespace SafeSurfing
             transform.localPosition = newPosition;
         }
 
+        public void SetFiringRate(float firingRate){
+            _BulletSpawner.FiringRate = firingRate;
+
+            Debug.Log(_BulletSpawner.FiringRate);
+        }
+
+        public void SetBulletSpeed(float bulletSpeed){
+            _BulletSpawner.BulletSpeed = bulletSpeed;
+        }
+
         protected override void OnTriggerCollison(Collider2D collision)
         {
             base.OnTriggerCollison(collision);
 
             if (collision.CompareTag("Enemy") && !IsIgnoringDamage)
                 OnDamaged();
+
         }
+
     }
 
     
