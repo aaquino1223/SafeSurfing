@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 27214b1ae823449a1b5fe89a2c597db6
+guid: ac7a8604a9ab84b1283d12daaa9cf78f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8334306477417016482
-    second: Safe Surfing Sprites 2_0
+      213: -6213477892412391994
+    second: explosion-2_0
   - first:
-      213: -822630588754537357
-    second: Safe Surfing Sprites 2_1
+      213: 7741590321322356173
+    second: explosion-2_1
   - first:
-      213: -325361666311961522
-    second: Safe Surfing Sprites 2_2
+      213: -5930032605028436212
+    second: explosion-2_2
   - first:
-      213: 8700362746959760783
-    second: Safe Surfing Sprites 2_3
+      213: 476265628114782681
+    second: explosion-2_3
   - first:
-      213: 1868140776583043957
-    second: Safe Surfing Sprites 2_4
+      213: 5575107500364596570
+    second: explosion-2_4
   - first:
-      213: 7117269288881001104
-    second: Safe Surfing Sprites 2_5
+      213: -959146483503714256
+    second: explosion-2_5
   - first:
-      213: 860759286564997367
-    second: Safe Surfing Sprites 2_6
+      213: 4444917362674149726
+    second: explosion-2_6
   - first:
-      213: -2096057665261588952
-    second: Safe Surfing Sprites 2_7
+      213: -6272555169741848140
+    second: explosion-2_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -69,9 +69,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -112,7 +112,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +124,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,43 +136,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: tvOS
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Lumin
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -183,13 +147,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Safe Surfing Sprites 2_0
+      name: explosion-2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,41 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2acadab859769a370800000000000000
-      internalID: 8334306477417016482
+      spriteID: 6cd340bf6ca45c9a0800000000000000
+      internalID: -6213477892412391994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Safe Surfing Sprites 2_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3745ae786dd6594f0800000000000000
-      internalID: -822630588754537357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Safe Surfing Sprites 2_2
+      name: explosion-2_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
-        width: 32
-        height: 32
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,83 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4442ffc9451c7bf0800000000000000
-      internalID: -325361666311961522
+      spriteID: dcd650b6167af6b60800000000000000
+      internalID: 7741590321322356173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Safe Surfing Sprites 2_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8d049562d5edb870800000000000000
-      internalID: 8700362746959760783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Safe Surfing Sprites 2_4
+      name: explosion-2_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57b97a27328fce910800000000000000
-      internalID: 1868140776583043957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Safe Surfing Sprites 2_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0929c8695be95c260800000000000000
-      internalID: 7117269288881001104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Safe Surfing Sprites 2_6
-      rect:
-        serializedVersion: 2
-        x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f843d8b20802fb00800000000000000
-      internalID: 860759286564997367
+      spriteID: c07bbcea3ca44bda0800000000000000
+      internalID: -5930032605028436212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Safe Surfing Sprites 2_7
+      name: explosion-2_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,8 +224,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82e2959a8ae49e2e0800000000000000
-      internalID: -2096057665261588952
+      spriteID: 9d9828eb0190c9600800000000000000
+      internalID: 476265628114782681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion-2_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5509dfbbb2ce5d40800000000000000
+      internalID: 5575107500364596570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion-2_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0303233ea5d60b2f0800000000000000
+      internalID: -959146483503714256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion-2_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59a82a8ac48fad30800000000000000
+      internalID: 4444917362674149726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion-2_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b14f797e4863f8a0800000000000000
+      internalID: -6272555169741848140
       vertices: []
       indices: 
       edges: []
@@ -353,7 +317,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fda4dc671e3974a8b9c3536d7e74d0dd
+    spriteID: efebde8e6e329469d94b9aad421bad02
     internalID: 0
     vertices: []
     indices: 
