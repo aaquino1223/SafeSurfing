@@ -55,6 +55,7 @@ namespace SafeSurfing
             _PickUpType = Levels[LevelIndex].PickUpType;
 
             NextWave();
+            StartCoroutine(SpawnPickups());
         }
 
         private void NextWave()
@@ -90,25 +91,42 @@ namespace SafeSurfing
             }
         }
 
-        //private IEnumerator SpawnPickups()
-        //{
-        //    var possiblePickUpTypes = new List<PickUpType>();
+        private IEnumerator SpawnPickups()
+        {
+           var possiblePickUpTypes = new List<PickUpType>();
 
-        //    foreach (var pickUpType in Enum.GetValues(typeof(PickUpType)).Cast<PickUpType>())
-        //        if (_PickUpType.HasFlag(pickUpType))
-        //            possiblePickUpTypes.Add(pickUpType);
+           foreach (var pickUpType in Enum.GetValues(typeof(PickUpType)).Cast<PickUpType>()){
+               if (_PickUpType.HasFlag(pickUpType))
+                   possiblePickUpTypes.Add(pickUpType);
+            }
 
-        //    //float currentTime = 0;
-        //    //float start = audioSource.volume;
+            // choose random pickup
+            // choose when it'll spawn at random, setTime
+            // spawn pickup after waiting setTime
+            // wait for interval
+            // loop
 
-        //    //while (currentTime < duration)
-        //    //{
-        //    //    currentTime += Time.deltaTime;
-        //    //    audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
-        //    //    yield return null;
-        //    //}
-        //    //yield break;
-        //}
+
+           float currentTime = 0;
+           // pick random index to know which pickup to spawn
+            var index = UnityEngine.Random.Range(0, possiblePickUpTypes.Count);
+            PickUpType pickupToSpawn = possiblePickUpTypes[index];
+            
+            //pick random wait time before spawning pickup
+           float timeBeforeSpawn = UnityEngine.Random.Range(7f, 10f);
+            Debug.Log("Pickup type: " + pickupToSpawn);
+            Debug.Log("Time before spawn: " + timeBeforeSpawn);
+
+           while (currentTime < timeBeforeSpawn)
+           {
+              currentTime += Time.deltaTime;
+              Debug.Log(currentTime);
+
+              yield return null;
+           }
+
+           yield break;
+        }
        
         private void EnemyDestroyed(object sender, int points)
         {
