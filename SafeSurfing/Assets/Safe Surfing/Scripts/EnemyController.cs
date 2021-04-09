@@ -8,7 +8,6 @@ using UnityEngine.Events;
 
 namespace SafeSurfing
 {
-    [RequireComponent(typeof(HealthController))]
     public abstract class EnemyController : HealthController
     {
         public float Speed = 5f;
@@ -121,7 +120,7 @@ namespace SafeSurfing
                 StartCoroutine(Util.TimedAction(null, OnDestroyed, 0.5f));
             }
         }
-        private void OnDestroyed()
+        protected virtual void OnDestroyed()
         {
             Destroyed?.Invoke(this, Points);
             Destroy(gameObject);

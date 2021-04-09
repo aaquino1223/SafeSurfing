@@ -11,7 +11,6 @@ using static SafeSurfing.Common.Constants.PlayerInput;
 namespace SafeSurfing
 {
     [RequireComponent(typeof(BulletSpawner))]
-    [RequireComponent(typeof(HealthController))]
     public class PlayerController : HealthController, IHeading
     {
         public float Speed = 5f;
@@ -99,8 +98,10 @@ namespace SafeSurfing
                         StartCoroutine(Util.TimedAction(() => SetFiringRate(0.25f), () => SetFiringRate(0.5f), pickUp.EffectDuration));
                         break;
                     case PickUpType.BulletSpeed:
+                        StartCoroutine(Util.TimedAction(() => SetBulletSpeed(20f), () => SetFiringRate(10f), pickUp.EffectDuration));
                         break;
                     case PickUpType.MoveSpeed:
+                        StartCoroutine(Util.TimedAction(() => Speed = 10f, () => Speed = 5f, pickUp.EffectDuration));
                         break;
                     case PickUpType.Special:
                         break;

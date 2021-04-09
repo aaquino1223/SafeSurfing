@@ -6,12 +6,15 @@ using SafeSurfing.Common;
 using UnityEngine.Events;
 using SafeSurfing.Common.Enums;
 using System;
+using SafeSurfing.Common.Interfaces;
 
 namespace SafeSurfing
 {
     public class GameManager : MonoBehaviour
     {
         public GameObject Screen;
+
+        public GameObject PickUpPrefab;
 
         private float _XMax;
         private float _YMax;
@@ -29,6 +32,7 @@ namespace SafeSurfing
         private int _ExpectedSpawnCount = 0;
 
         private PickUpType _PickUpType;
+        private Coroutine _PickUpCoroutine;
 
         public int Score { get; private set; } = 0;
 
@@ -55,9 +59,12 @@ namespace SafeSurfing
             _PickUpType = Levels[LevelIndex].PickUpType;
 
             NextWave();
-            StartCoroutine(SpawnPickups());
-        }
 
+            if (_PickUpCoroutine != null)
+                StopCoroutine(_PickUpCoroutine);
+
+            SpawnPickupRecursive();
+        }
         private void NextWave()
         {
             WaveIndex++;
@@ -84,6 +91,10 @@ namespace SafeSurfing
                     enemyController.Screen = Screen;
                     enemyController.Destroyed += EnemyDestroyed;
 
+                    var spawningController = enemyController as ICanSpawnEnemy;
+                    if (spawningController != null)
+                        spawningController.SpawnedEnemies += SpawnedEnemies;
+
                     EnemySpawned?.Invoke();
                 };
 
@@ -91,43 +102,60 @@ namespace SafeSurfing
             }
         }
 
-        private IEnumerator SpawnPickups()
+        private void SpawnPickupRecursive()
         {
-           var possiblePickUpTypes = new List<PickUpType>();
+            var possiblePickUpTypes = new List<PickUpType>();
 
-           foreach (var pickUpType in Enum.GetValues(typeof(PickUpType)).Cast<PickUpType>()){
-               if (_PickUpType.HasFlag(pickUpType))
-                   possiblePickUpTypes.Add(pickUpType);
+            foreach (var pickUpType in Enum.GetValues(typeof(PickUpType)).Cast<PickUpType>())
+            {
+                if (_PickUpType.HasFlag(pickUpType))
+                    possiblePickUpTypes.Add(pickUpType);
             }
 
-            // choose random pickup
-            // choose when it'll spawn at random, setTime
-            // spawn pickup after waiting setTime
-            // wait for interval
-            // loop
-
-
-           float currentTime = 0;
-           // pick random index to know which pickup to spawn
-            var index = UnityEngine.Random.Range(0, possiblePickUpTypes.Count);
-            PickUpType pickupToSpawn = possiblePickUpTypes[index];
-            
             //pick random wait time before spawning pickup
-           float timeBeforeSpawn = UnityEngine.Random.Range(7f, 10f);
-            Debug.Log("Pickup type: " + pickupToSpawn);
-            Debug.Log("Time before spawn: " + timeBeforeSpawn);
+            var timeBeforeSpawn = UnityEngine.Random.Range(10f, 15f);
 
-           while (currentTime < timeBeforeSpawn)
-           {
-              currentTime += Time.deltaTime;
-              Debug.Log(currentTime);
+            UnityAction spawn = () =>
+            {
+                // pick random index to know which pickup to spawn
+                var index = UnityEngine.Random.Range(0, possiblePickUpTypes.Count);
+                var pickupToSpawn = possiblePickUpTypes[index];
 
-              yield return null;
-           }
+                var xPos = UnityEngine.Random.Range(-_XMax + 1, _XMax - 1);
 
-           yield break;
+                var spawnPosition = Quaternion.Euler(transform.rotation.eulerAngles) * new Vector3(xPos, _YMax + 1, 0);
+
+                var pickUpClone = Instantiate(PickUpPrefab, spawnPosition, transform.rotation, transform);
+
+                var pickupController = pickUpClone.GetComponent<PickUpController>();
+                pickupController.PickUpType = pickupToSpawn;
+                if (pickupToSpawn == PickUpType.Trojan)
+                    pickupController.SpawnedEnemies += SpawnedEnemies;
+                //pickupController.Destroyed += EnemyDestroyed;
+
+                SpawnPickupRecursive();
+            };
+
+            _PickUpCoroutine = StartCoroutine(Util.TimedAction(
+                null,
+                spawn,
+                timeBeforeSpawn
+                ));
         }
-       
+
+        private void SpawnedEnemies(object sender, IEnumerable<EnemyController> enemies)
+        {
+            EnemySpawned?.Invoke();
+            _ExpectedSpawnCount += enemies.Count();
+            foreach (var enemy in enemies)
+            {
+                enemy.Destroyed += EnemyDestroyed;
+                var spawningController = enemy as ICanSpawnEnemy;
+                if (spawningController != null)
+                    spawningController.SpawnedEnemies += SpawnedEnemies;
+            }
+        }
+
         private void EnemyDestroyed(object sender, int points)
         {
             _EnemyDestroyed++;

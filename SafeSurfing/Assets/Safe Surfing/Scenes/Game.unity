@@ -163,9 +163,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1609698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a309719dcbb55e34b9e29a50f4508234, type: 3}
+  m_Script: {fileID: 11500000, guid: 672300a19c764984fb8f9328db691d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Screen: {fileID: 643882706}
+  PickUpPrefab: {fileID: 4421831271689683366, guid: 0cc1ca1061814a24a9b35fdc5c612ab0,
+    type: 3}
+  EnemySpawned:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1f16a3507b618e341beb073be177d55e, type: 2}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: bf8e643d5b8234a67b76f0c7c2cc94e2,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  WaveChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  LevelChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  ScoreChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  Levels:
+  - {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
 --- !u!82 &1609701
 AudioSource:
   m_ObjectHideFlags: 0
@@ -350,7 +379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8894240406400500696, guid: 3ab8b47d8e2054d89a5db6b92fd5db72,
+  m_Sprite: {fileID: 1295505138642296768, guid: f9d33bc6a45326441b139369b38432cc,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1789,7 +1818,6 @@ GameObject:
   - component: {fileID: 1085171966}
   - component: {fileID: 1085171967}
   - component: {fileID: 1085171968}
-  - component: {fileID: 1085171969}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1850,7 +1878,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8894240406400500696, guid: 3ab8b47d8e2054d89a5db6b92fd5db72,
+  m_Sprite: {fileID: 1295505138642296768, guid: f9d33bc6a45326441b139369b38432cc,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1984,37 +2012,6 @@ MonoBehaviour:
     type: 3}
   BulletSpeed: 10
   FiringRate: 0.5
---- !u!114 &1085171969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085171962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68b5974e44f66b8499f00deed76ed33f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Lives: 3
-  LifeLost:
-    m_PersistentCalls:
-      m_Calls: []
-  AllLivesLost:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1f16a3507b618e341beb073be177d55e, type: 2}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 3f6075a50fef9401294198893931c12a,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1088801504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,7 +2194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8894240406400500696, guid: 3ab8b47d8e2054d89a5db6b92fd5db72,
+  m_Sprite: {fileID: 1295505138642296768, guid: f9d33bc6a45326441b139369b38432cc,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2913,7 +2910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8894240406400500696, guid: 3ab8b47d8e2054d89a5db6b92fd5db72,
+  m_Sprite: {fileID: 1295505138642296768, guid: f9d33bc6a45326441b139369b38432cc,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0

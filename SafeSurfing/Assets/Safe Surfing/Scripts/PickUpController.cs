@@ -3,15 +3,19 @@ using SafeSurfing.Common;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SafeSurfing.Common.Interfaces;
+using System;
 
 namespace SafeSurfing
 {
-    public class PickUpController : MonoBehaviour
+    public class PickUpController : MonoBehaviour, ICanSpawnEnemy
     {
         public PickUpType PickUpType;
         public float EffectDuration;
         public GameObject TrojanPrefab;
         public float FallSpeed = 2.5f;
+
+        public event EventHandler<IEnumerable<EnemyController>> SpawnedEnemies;
 
         //private SpriteRenderer _SpriteRenderer;
 
@@ -51,7 +55,10 @@ namespace SafeSurfing
             //Trojan spawn here
 
             if (PickUpType == PickUpType.Trojan)
-                Instantiate(TrojanPrefab, transform.position, Quaternion.identity, transform.parent);
+            {
+                var trojanPrefab = Instantiate(TrojanPrefab, transform.position, Quaternion.identity, transform.parent);
+                SpawnedEnemies?.Invoke(this, new List<EnemyController>() { trojanPrefab.GetComponent<EnemyController>() });
+            }
 
             Destroy(gameObject);
         }

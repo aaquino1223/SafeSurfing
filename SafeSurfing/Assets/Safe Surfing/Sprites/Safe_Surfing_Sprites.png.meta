@@ -1,7 +1,49 @@
 fileFormatVersion: 2
-guid: 3ab8b47d8e2054d89a5db6b92fd5db72
+guid: f9d33bc6a45326441b139369b38432cc
 TextureImporter:
   internalIDToNameTable:
+  - first:
+      213: -7307482188173101438
+    second: Safe_Surfing_Sprites_New_0
+  - first:
+      213: 2431726743881233285
+    second: Safe_Surfing_Sprites_New_1
+  - first:
+      213: -7055224377408167613
+    second: Safe_Surfing_Sprites_New_2
+  - first:
+      213: 7858484590113421348
+    second: Safe_Surfing_Sprites_New_3
+  - first:
+      213: -3713657755365659924
+    second: Safe_Surfing_Sprites_New_4
+  - first:
+      213: 2540467441405381097
+    second: Safe_Surfing_Sprites_New_5
+  - first:
+      213: -5075935949532752295
+    second: Safe_Surfing_Sprites_New_6
+  - first:
+      213: -4986415963389093457
+    second: Safe_Surfing_Sprites_New_7
+  - first:
+      213: -3903460817081721872
+    second: Safe_Surfing_Sprites_New_8
+  - first:
+      213: -9001240523665113343
+    second: Safe_Surfing_Sprites_New_9
+  - first:
+      213: -9128486630376872699
+    second: Safe_Surfing_Sprites_New_10
+  - first:
+      213: -3573659175538703142
+    second: Safe_Surfing_Sprites_New_11
+  - first:
+      213: 8892474729049012329
+    second: Safe_Surfing_Sprites_New_12
+  - first:
+      213: 392571467873124725
+    second: Safe_Surfing_Sprites_New_13
   - first:
       213: -2819037916386923567
     second: Safe_Surfing_Sprites_0
@@ -44,84 +86,6 @@ TextureImporter:
   - first:
       213: -7906380028426127089
     second: Safe_Surfing_Sprites_13
-  - first:
-      213: -85898464251074527
-    second: Safe_Surfing_Sprites_14
-  - first:
-      213: 596024985819532986
-    second: Safe_Surfing_Sprites_15
-  - first:
-      213: -483781765504845919
-    second: Safe_Surfing_Sprites_16
-  - first:
-      213: 5179042236919781779
-    second: Safe_Surfing_Sprites_17
-  - first:
-      213: 3127357486319793230
-    second: Safe_Surfing_Sprites_18
-  - first:
-      213: -6571130583611895611
-    second: Safe_Surfing_Sprites_19
-  - first:
-      213: 7611205044274770880
-    second: Safe_Surfing_Sprites_20
-  - first:
-      213: -6012379902627333954
-    second: Safe_Surfing_Sprites_21
-  - first:
-      213: 3902009987422580542
-    second: Safe_Surfing_Sprites_22
-  - first:
-      213: 3290996772021813804
-    second: Safe_Surfing_Sprites_23
-  - first:
-      213: 2478261010852435908
-    second: Safe_Surfing_Sprites_24
-  - first:
-      213: -3031465263701166356
-    second: Safe_Surfing_Sprites_25
-  - first:
-      213: -6477483911386935870
-    second: Safe_Surfing_Sprites_26
-  - first:
-      213: 3260970663468742268
-    second: Safe_Surfing_Sprites_27
-  - first:
-      213: -9032059714140556296
-    second: Safe_Surfing_Sprites_28
-  - first:
-      213: -744945341984195924
-    second: Safe_Surfing_Sprites_29
-  - first:
-      213: -5117847477230770618
-    second: Safe_Surfing_Sprites_30
-  - first:
-      213: 5836816335583569536
-    second: Safe_Surfing_Sprites_31
-  - first:
-      213: -7892458943297439709
-    second: Safe_Surfing_Sprites_32
-  - first:
-      213: 533875096312049040
-    second: Safe_Surfing_Sprites_33
-  - first:
-      213: -4183288734024433489
-    second: Safe_Surfing_Sprites_34
-  - first:
-      213: 7736906555146332074
-    second: Safe_Surfing_Sprites_35
-  - first:
-      213: -2916411916373648657
-    second: Safe_Surfing_Sprites_36
-  - first:
-      213: 8547253595349570203
-    second: Safe_Surfing_Sprites_37
-  - first:
-      213: 7778408787817744420
-    second: Safe_Surfing_Sprites_38
-  - first:
-      213: -157478627280293435
-    second: Safe_Surfing_Sprites_39
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -208,7 +172,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -220,7 +184,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -232,7 +196,43 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -247,7 +247,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -268,7 +268,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -289,7 +289,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -310,7 +310,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -331,7 +331,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -352,7 +352,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -373,7 +373,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -394,7 +394,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -414,8 +414,8 @@ TextureImporter:
       name: Safe_Surfing_Sprites_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
+        x: 640
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -435,8 +435,8 @@ TextureImporter:
       name: Safe_Surfing_Sprites_9
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
+        x: 0
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -452,10 +452,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5bfcf193a845150800000000000000
+      internalID: 5860460993067333106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8355e1f9965b22e0800000000000000
+      internalID: -2149529177950956658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6c6ae0b5f03ae60800000000000000
+      internalID: 7972232649138161333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09fa620145e64290800000000000000
+      internalID: -7906380028426127089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 7e0ddcbe227803041b4e28e064cda810
     internalID: 0
     vertices: []
     indices: 
