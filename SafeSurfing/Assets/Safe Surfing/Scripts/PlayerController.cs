@@ -110,7 +110,7 @@ namespace SafeSurfing
                         coroutine = StartCoroutine(Util.TimedAction(() => SetFiringRate(0.25f), () => SetFiringRate(0.5f), pickUp.EffectDuration));
                         break;
                     case PickUpType.BulletSpeed:
-                        coroutine = StartCoroutine(Util.TimedAction(() => SetBulletSpeed(20f), () => SetFiringRate(10f), pickUp.EffectDuration));
+                        coroutine = StartCoroutine(Util.TimedAction(() => SetBulletSpeed(20f), () => SetBulletSpeed(10f), pickUp.EffectDuration));
                         break;
                     case PickUpType.MoveSpeed:
                         coroutine = StartCoroutine(Util.TimedAction(() => Speed = 10f, () => Speed = 5f, pickUp.EffectDuration));

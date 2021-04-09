@@ -20,4 +20,19 @@ namespace SafeSurfing.Common.Enums
         Special = 1 << 3,
         Trojan = 1 << 4
     }
+
+    public enum JITType
+    {
+        Tutorial,
+        Virus,
+        Trojan,
+        Worm,
+        DDOS,
+        Boss,
+        BulletSpeed,
+        MoveSpeed,
+        FiringRate,
+        Special,
+        
+    }
 }

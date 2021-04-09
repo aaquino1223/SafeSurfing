@@ -36,6 +36,10 @@ namespace SafeSurfing
 
         public int Score { get; private set; } = 0;
 
+        private Dictionary<JITType, bool> _JITFlags;
+
+        public JITInstructionManager _JITManager;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -67,6 +71,12 @@ namespace SafeSurfing
         }
         private void NextWave()
         {
+            // ONLY FOR TESTING PURPOSES
+            if(WaveIndex > -1){
+                _JITManager.UpdateJITController("Hello temp", "sample instructions");
+                _JITManager.OpenJIT();
+            }
+            
             WaveIndex++;
             WaveChanged?.Invoke();
 
@@ -90,6 +100,7 @@ namespace SafeSurfing
                     var enemyController = enemyClone.GetComponent<EnemyController>();
                     enemyController.Screen = Screen;
                     enemyController.Destroyed += EnemyDestroyed;
+                    
 
                     var spawningController = enemyController as ICanSpawnEnemy;
                     if (spawningController != null)
@@ -171,5 +182,9 @@ namespace SafeSurfing
                     NextLevel(); //TODO: Else they won, go to final screen
             }
         }
+
+        
+
+
     }
 }
