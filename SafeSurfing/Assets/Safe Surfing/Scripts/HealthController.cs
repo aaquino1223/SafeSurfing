@@ -14,6 +14,8 @@ namespace SafeSurfing
         public UnityEvent LifeLost;
         public UnityEvent AllLivesLost;
 
+        public GameObject ExplosionPrefab;
+
         public bool IsDead => Lives == 0;
         public bool IsIgnoringDamage { get; private set; }
 
@@ -61,11 +63,31 @@ namespace SafeSurfing
                 Lives--;
                 LifeLost?.Invoke();
 
-                if (IsDead)
+                if (IsDead){
+                    var explosion = Instantiate(ExplosionPrefab, transform.position, transform.rotation, transform.parent);
+                    Destroy(explosion, 0.7f);
                     AllLivesLost?.Invoke();
+                }
                 else
+                if(IsIgnoringDamage){
+                    StartCoroutine(FlashOnDamage());
+                }
                     LifeLost?.Invoke();
             }
         }
+
+        public IEnumerator FlashOnDamage(){
+            var spriteRenderer = GetComponent<SpriteRenderer>();
+            var spriteColor = spriteRenderer.color;
+
+            while(IsIgnoringDamage){
+                spriteRenderer.color = Color.clear;
+                yield return new WaitForSeconds(0.1f);
+                spriteRenderer.color = spriteColor;
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+
+
     }
 }

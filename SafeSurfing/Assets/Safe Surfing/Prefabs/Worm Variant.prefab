@@ -72,5 +72,11 @@ PrefabInstance:
       propertyPath: WormPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3496359801612778445, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 7252842051325305962, guid: 6035b9561aa07466cb691ee77db2800b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d243d6d2a83ac64b88e5545b551c8cd, type: 3}

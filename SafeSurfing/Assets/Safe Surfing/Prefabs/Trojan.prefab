@@ -205,6 +205,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ExplosionPrefab: {fileID: 7252842051325305962, guid: 6035b9561aa07466cb691ee77db2800b,
+    type: 3}
   Speed: 5
   Points: 10
   Screen: {fileID: 0}
