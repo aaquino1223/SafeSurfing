@@ -5,27 +5,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using SafeSurfing.Common.Interfaces;
 using System;
+using System.Linq;
 
 namespace SafeSurfing
 {
     public class PickUpController : MonoBehaviour, ICanSpawnEnemy
     {
-        public PickUpType PickUpType;
+        private PickUpType _PickUpType;
+        public PickUpType PickUpType
+        {
+            get { return _PickUpType; }
+            set
+            {
+                if (_PickUpType != value)
+                {
+                    _PickUpType = value;
+
+                    Sprite pickUpSprite = null;
+                    if (_PickUpType == PickUpType.Trojan)
+                    {
+                        var index = UnityEngine.Random.Range(0, PickUpSprites.Count());
+                        pickUpSprite = PickUpSprites.ElementAtOrDefault(index)?.Sprite;
+                    }
+                    else
+                        pickUpSprite = PickUpSprites.FirstOrDefault(x => x.PickUpType == _PickUpType)?.Sprite;
+
+                    if (pickUpSprite != null)
+                    {
+                        GetComponent<SpriteRenderer>().sprite = pickUpSprite;
+                        var collider = gameObject.AddComponent<PolygonCollider2D>();
+                        collider.isTrigger = true;
+                    }
+                }
+            }
+        }
+
+        public PickUpSprite[] PickUpSprites;
+
         public float EffectDuration;
         public GameObject TrojanPrefab;
         public float FallSpeed = 2.5f;
 
         public event EventHandler<IEnumerable<EnemyController>> SpawnedEnemies;
 
-        //private SpriteRenderer _SpriteRenderer;
-
-        //private CircleCollider2D _Collider;
 
         // Start is called before the first frame update
         void Start()
         {
-            //_SpriteRenderer = GetComponent<SpriteRenderer>();
-            //_Collider = GetComponent<CircleCollider2D>();
+
         }
 
         // Update is called once per frame
@@ -81,5 +108,12 @@ namespace SafeSurfing
         //}
 
 
+    }
+
+    [Serializable]
+    public class PickUpSprite
+    {
+        public PickUpType PickUpType;
+        public Sprite Sprite;
     }
 }

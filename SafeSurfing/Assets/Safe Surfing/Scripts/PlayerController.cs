@@ -25,11 +25,13 @@ namespace SafeSurfing
         private float _Vertical;
 
         private BulletSpawner _BulletSpawner;
+        private Dictionary<PickUpType, Coroutine> _PickUpCoroutineDictionary;
         //private HealthController _HealthController;
 
         // Start is called before the first frame update
         void Start()
         {
+            _PickUpCoroutineDictionary = new Dictionary<PickUpType, Coroutine>();
             _BulletSpawner = GetComponent<BulletSpawner>();
 
             //_HealthController = GetComponent<HealthController>();
@@ -82,6 +84,8 @@ namespace SafeSurfing
             _BulletSpawner.BulletSpeed = bulletSpeed;
         }
 
+
+
         protected override void OnTriggerCollison(Collider2D collision)
         {
             base.OnTriggerCollison(collision);
@@ -91,21 +95,31 @@ namespace SafeSurfing
             else if (collision.CompareTag("Pickup"))
             {
                 var pickUp = collision.gameObject.GetComponent<PickUpController>();
-                
+                var pickUpType = pickUp.PickUpType;
+
+                Coroutine coroutine;
+                if (_PickUpCoroutineDictionary.TryGetValue(pickUpType, out coroutine))
+                {
+                    StopCoroutine(coroutine);
+                    _PickUpCoroutineDictionary.Remove(pickUpType);
+                }
+
                 switch (pickUp.PickUpType)
                 {
                     case PickUpType.FiringRate:
-                        StartCoroutine(Util.TimedAction(() => SetFiringRate(0.25f), () => SetFiringRate(0.5f), pickUp.EffectDuration));
+                        coroutine = StartCoroutine(Util.TimedAction(() => SetFiringRate(0.25f), () => SetFiringRate(0.5f), pickUp.EffectDuration));
                         break;
                     case PickUpType.BulletSpeed:
-                        StartCoroutine(Util.TimedAction(() => SetBulletSpeed(20f), () => SetFiringRate(10f), pickUp.EffectDuration));
+                        coroutine = StartCoroutine(Util.TimedAction(() => SetBulletSpeed(20f), () => SetFiringRate(10f), pickUp.EffectDuration));
                         break;
                     case PickUpType.MoveSpeed:
-                        StartCoroutine(Util.TimedAction(() => Speed = 10f, () => Speed = 5f, pickUp.EffectDuration));
+                        coroutine = StartCoroutine(Util.TimedAction(() => Speed = 10f, () => Speed = 5f, pickUp.EffectDuration));
                         break;
                     case PickUpType.Special:
                         break;
                 }
+
+                _PickUpCoroutineDictionary[pickUpType] = coroutine;
 
                 pickUp.Consumed();
             }
