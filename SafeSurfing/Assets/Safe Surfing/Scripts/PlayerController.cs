@@ -21,6 +21,7 @@ namespace SafeSurfing
 
         public bool IsMoving { get { return _Horizontal != 0 || _Vertical != 0; } }
         private Dictionary<PullController, Vector3> _PullVectorDictionary;
+        private Dictionary<SlowController, float> _SlowFloatDictionary;
 
         private float _Horizontal;
         private float _Vertical;
@@ -31,16 +32,14 @@ namespace SafeSurfing
         public GameObject _Shield;
         public LaserController _LaserController;
         private bool _CanShootLaser;
-        //private HealthController _HealthController;
 
         // Start is called before the first frame update
         void Start()
         {
             _PickUpCoroutineDictionary = new Dictionary<PickUpType, Coroutine>();
             _PullVectorDictionary = new Dictionary<PullController, Vector3>();
+            _SlowFloatDictionary = new Dictionary<SlowController, float>();
             _BulletSpawner = GetComponent<BulletSpawner>();
-
-            //_HealthController = GetComponent<HealthController>();
 
             AddLifeLostListener(OnLifeLost, true);
 
@@ -81,8 +80,10 @@ namespace SafeSurfing
             var deltaTime = Time.deltaTime;
             var localX = transform.localPosition.x;
             var localY = transform.localPosition.y;
+
+            var finalSpeed = Speed - (_SlowFloatDictionary.Count > 0 ? _SlowFloatDictionary.Values.Max(x => x) : 0);
             if (IsMoving)
-                newPosition = new Vector3(localX + _Horizontal * Speed * deltaTime, localY + _Vertical * Speed * deltaTime, 0);
+                newPosition = new Vector3(localX + _Horizontal * finalSpeed * deltaTime, localY + _Vertical * finalSpeed * deltaTime, 0);
             else
                 newPosition = new Vector3(localX, localY - FallSpeed * deltaTime, 0);
 
@@ -159,12 +160,21 @@ namespace SafeSurfing
             if (collision.CompareTag("Trap"))
             {
                 PullController pullController;
-
+                
                 if (collision.gameObject.TryGetComponent(out pullController))
                 {
                     var pullVector = pullController.GetEffect(gameObject);
 
                     _PullVectorDictionary[pullController] = pullVector;
+                }
+
+                SlowController slowController;
+
+                if (collision.gameObject.TryGetComponent(out slowController))
+                {
+                    var slowValue = slowController.GetEffect();
+
+                    _SlowFloatDictionary[slowController] = slowValue;
                 }
             }
         }
@@ -178,6 +188,12 @@ namespace SafeSurfing
                 if (collision.gameObject.TryGetComponent(out pullController))
                     if (_PullVectorDictionary.ContainsKey(pullController))
                     _PullVectorDictionary.Remove(pullController);
+
+                SlowController slowController;
+
+                if (collision.gameObject.TryGetComponent(out slowController))
+                    if (_SlowFloatDictionary.ContainsKey(slowController))
+                        _SlowFloatDictionary.Remove(slowController);
             }
         }
 

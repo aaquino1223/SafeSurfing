@@ -7,6 +7,6 @@ namespace SafeSurfing
 {
     public abstract class TrapController<T> : MonoBehaviour
     {
-        public abstract T GetEffect(GameObject player);
+        public abstract T GetEffect(GameObject player = null);
     }
 }

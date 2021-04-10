@@ -70,13 +70,6 @@ namespace SafeSurfing
                 OnDestroyed();
         }
 
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
         private void FixedUpdate()
         {
             if (_Pattern == null || _Pattern.Count() == 0)
