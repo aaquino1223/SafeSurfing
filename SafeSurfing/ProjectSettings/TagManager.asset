@@ -43,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ScrollBG
+    uniqueID: 3841421827
+    locked: 0
   - name: Background
     uniqueID: 2725628137
     locked: 0

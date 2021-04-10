@@ -21,13 +21,13 @@ public class ScrollBG : MonoBehaviour
     {
         transform.Translate(Vector3.down * ScrollSpeed * Time.deltaTime);
 
-        if(transform.localPosition.y < -(height * 3)){
+        if(transform.localPosition.y < - height){
             RepositionBG();
         }
     }
 
     private void RepositionBG(){
-        Vector3 vector = new Vector3(0, height * 3f);
+        Vector3 vector = new Vector3(0, height);
         transform.localPosition = StartPos;
     }
 }

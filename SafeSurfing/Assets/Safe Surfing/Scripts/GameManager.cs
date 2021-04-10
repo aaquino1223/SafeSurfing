@@ -39,6 +39,8 @@ namespace SafeSurfing
         private Dictionary<JITType, bool> _JITFlags;
 
         public JITInstructionManager _JITManager;
+        public float MinTimeBeforeSpawn = 10f;
+        public float MaxTimeBeforeSpawn = 15f;
 
         // Start is called before the first frame update
         void Start()
@@ -125,7 +127,7 @@ namespace SafeSurfing
             }
 
             //pick random wait time before spawning pickup
-            var timeBeforeSpawn = UnityEngine.Random.Range(10f, 15f);
+            var timeBeforeSpawn = UnityEngine.Random.Range(MinTimeBeforeSpawn, MaxTimeBeforeSpawn);
 
             UnityAction spawn = () =>
             {

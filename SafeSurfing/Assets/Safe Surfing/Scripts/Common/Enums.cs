@@ -18,7 +18,9 @@ namespace SafeSurfing.Common.Enums
         FiringRate = 1 << 1,
         MoveSpeed = 1 << 2,
         Special = 1 << 3,
-        Trojan = 1 << 4
+        Trojan = 1 << 4,
+        Shield = 1 << 5,
+        ExtraLife = 1 << 6
     }
 
     public enum TrapType

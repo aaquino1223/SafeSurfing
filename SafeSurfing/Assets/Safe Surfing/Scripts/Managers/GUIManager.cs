@@ -31,7 +31,10 @@ namespace SafeSurfing
 
             _HealthController = Player.GetComponent<HealthController>();
             if (_HealthController != null)
+            {
                 _HealthController.AddLifeLostListener(OnPlayerLifeLost, true);
+                _HealthController.AddLifeGainedListener(OnPlayerLifeGained);
+            }
 
             if(Spawner != null)
             {
@@ -46,6 +49,10 @@ namespace SafeSurfing
             Lives[_HealthController.Lives].enabled = false;
         }
 
+        private void OnPlayerLifeGained()
+        {
+            Lives[_HealthController.Lives - 1].enabled = true;
+        }
         private void OnWaveChanged()
         {
             //comes from enemyspawner

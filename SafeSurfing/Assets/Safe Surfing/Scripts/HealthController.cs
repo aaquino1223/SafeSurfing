@@ -11,6 +11,7 @@ namespace SafeSurfing
     {
         public int Lives = 3;
 
+        public UnityEvent LifeGained;
         public UnityEvent LifeLost;
         public UnityEvent AllLivesLost;
 
@@ -28,6 +29,10 @@ namespace SafeSurfing
                 ));
         }
 
+        public void AddLife()
+        {
+            Lives++;
+        }
         public void AddLifeLostListener(UnityAction unityAction, bool includeAllLivesLost = false)
         {
             LifeLost.AddListener(unityAction);
@@ -35,6 +40,10 @@ namespace SafeSurfing
                 AllLivesLost.AddListener(unityAction);
         }
 
+        public void AddLifeGainedListener(UnityAction unityAction)
+        {
+            LifeGained.AddListener(unityAction);
+        }
         private void OnTriggerEnter2D(Collider2D collision)
         {
             OnTriggerCollison(collision);

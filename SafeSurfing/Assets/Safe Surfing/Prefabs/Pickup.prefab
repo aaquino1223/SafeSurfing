@@ -58,6 +58,12 @@ MonoBehaviour:
   - PickUpType: 8
     Sprite: {fileID: 7972232649138161333, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
+  - PickUpType: 32
+    Sprite: {fileID: 5706845783461447715, guid: ca99ee9a7b71513489468b0623c9ed3e,
+      type: 3}
+  - PickUpType: 64
+    Sprite: {fileID: -6844568518026656586, guid: ca99ee9a7b71513489468b0623c9ed3e,
+      type: 3}
   EffectDuration: 5
   TrojanPrefab: {fileID: 4374667652156026736, guid: a49e5e04ea65b504d93f36239e8fa226,
     type: 3}
@@ -100,7 +106,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -40,6 +40,7 @@ namespace SafeSurfing
             //_HealthController = GetComponent<HealthController>();
 
             AddLifeLostListener(OnLifeLost);
+            AddLifeGainedListener(OnLifeGained);
         }
 
         private void OnLifeLost()
@@ -47,6 +48,10 @@ namespace SafeSurfing
             SetIgnoreBullets(3f);
         }
 
+        private void OnLifeGained()
+        {
+            AddLife();
+        }
         // Update is called once per frame
         void Update()
         {
@@ -123,6 +128,16 @@ namespace SafeSurfing
                         coroutine = StartCoroutine(Util.TimedAction(() => Speed = 10f, () => Speed = 5f, pickUp.EffectDuration));
                         break;
                     case PickUpType.Special:
+                        break;
+                    case PickUpType.Shield:
+                        break;
+                    case PickUpType.ExtraLife:
+                        coroutine = StartCoroutine(Util.TimedAction(null, () => {
+                        if (Lives < 3)
+                        {
+                            LifeGained?.Invoke();
+                        }
+                        }, 0f));
                         break;
                 }
 
