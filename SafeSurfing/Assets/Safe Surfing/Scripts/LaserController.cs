@@ -17,9 +17,13 @@ namespace SafeSurfing
 
         private float _YMax;
         private int _LastBodyIndex = 0;
-        public void ShootLaser(float time = 5f)
+        public bool ShootLaser(float time = 5f)
         {
+            if (_Shooting)
+                return false;
+
             _LastBodyIndex = 0;
+            
             StartCoroutine(Util.TimedAction(() => _Shooting = true, 
                 () => 
                 { 
@@ -30,6 +34,8 @@ namespace SafeSurfing
                     _LaserBodies.Clear();
                 }, 
                 time));
+
+            return true;
         }
 
         private void Start()

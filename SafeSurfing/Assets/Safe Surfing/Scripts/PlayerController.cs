@@ -30,6 +30,7 @@ namespace SafeSurfing
 
         public GameObject _Shield;
         public LaserController _LaserController;
+        private bool _CanShootLaser;
         //private HealthController _HealthController;
 
         // Start is called before the first frame update
@@ -42,7 +43,6 @@ namespace SafeSurfing
             //_HealthController = GetComponent<HealthController>();
 
             AddLifeLostListener(OnLifeLost, true);
-            AddLifeGainedListener(OnLifeGained);
 
             _Shield.SetActive(false);
         }
@@ -55,10 +55,6 @@ namespace SafeSurfing
                 OnDestroyed();
         }
 
-        private void OnLifeGained()
-        {
-            AddLife();
-        }
         // Update is called once per frame
         void Update()
         {
@@ -69,8 +65,8 @@ namespace SafeSurfing
             if (IsPressingSpace)
                 _BulletSpawner.Shoot();
 
-            if (Input.GetKey(KeyCode.X))
-                _LaserController.ShootLaser();
+            if (Input.GetKeyDown(KeyCode.X) && _CanShootLaser)
+                _CanShootLaser = !_LaserController.ShootLaser(); //In case picked up laser again
             //// Game Manager can probably handle this
             //if (PlayerLives <= 0) 
             //{
@@ -121,7 +117,7 @@ namespace SafeSurfing
                 var pickUp = collision.gameObject.GetComponent<PickUpController>();
                 var pickUpType = pickUp.PickUpType;
 
-                Coroutine coroutine;
+                Coroutine coroutine = null;
                 if (_PickUpCoroutineDictionary.TryGetValue(pickUpType, out coroutine))
                 {
                     StopCoroutine(coroutine);
@@ -140,21 +136,19 @@ namespace SafeSurfing
                         coroutine = StartCoroutine(Util.TimedAction(() => Speed = 10f, () => Speed = 5f, pickUp.EffectDuration));
                         break;
                     case PickUpType.Special:
+                        _CanShootLaser = true;
                         break;
                     case PickUpType.Shield:
                         coroutine = StartCoroutine(Util.TimedAction(() => ActivateShield(true), () => ActivateShield(false), pickUp.EffectDuration));
                         break;
                     case PickUpType.ExtraLife:
-                        coroutine = StartCoroutine(Util.TimedAction(null, () => {
                         if (Lives < 3)
-                        {
-                            LifeGained?.Invoke();
-                        }
-                        }, 0f));
+                            AddLife();
                         break;
                 }
 
-                _PickUpCoroutineDictionary[pickUpType] = coroutine;
+                if (coroutine != null)
+                    _PickUpCoroutineDictionary[pickUpType] = coroutine;
 
                 pickUp.Consumed();
             }

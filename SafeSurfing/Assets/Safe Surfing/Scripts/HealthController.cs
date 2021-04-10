@@ -32,6 +32,7 @@ namespace SafeSurfing
         public void AddLife()
         {
             Lives++;
+            LifeGained?.Invoke();
         }
         public void AddLifeLostListener(UnityAction unityAction, bool includeAllLivesLost = false)
         {
