@@ -20,10 +20,10 @@ namespace SafeSurfing
         public bool IsDead => Lives == 0;
         public bool IsIgnoringDamage { get; private set; }
 
-        public void SetIgnoreBullets(float ignoreTime)
+        public void SetIgnoreBullets(float ignoreTime, bool hasShield)
         {
             StartCoroutine(Util.TimedAction(
-                () => { IsIgnoringDamage = true; StartCoroutine(FlashOnDamage()); },
+                () => { IsIgnoringDamage = true; if (!hasShield) StartCoroutine(FlashOnDamage()); },
                 () => IsIgnoringDamage = false,
                 ignoreTime
                 ));

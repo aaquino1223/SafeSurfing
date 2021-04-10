@@ -28,6 +28,7 @@ namespace SafeSurfing
         private BulletSpawner _BulletSpawner;
         private Dictionary<PickUpType, Coroutine> _PickUpCoroutineDictionary;
 
+        public SpriteRenderer _Shield;
         //private HealthController _HealthController;
 
         // Start is called before the first frame update
@@ -45,7 +46,7 @@ namespace SafeSurfing
 
         private void OnLifeLost()
         {
-            SetIgnoreBullets(3f);
+            SetIgnoreBullets(3f, false);
         }
 
         private void OnLifeGained()
@@ -95,6 +96,11 @@ namespace SafeSurfing
         public void SetBulletSpeed(float bulletSpeed){
             _BulletSpawner.BulletSpeed = bulletSpeed;
         }
+        public void ActivateShield(bool state){
+            _Shield.enabled = state;
+            if (state)
+                SetIgnoreBullets(5f, true);
+        }
 
 
 
@@ -130,6 +136,7 @@ namespace SafeSurfing
                     case PickUpType.Special:
                         break;
                     case PickUpType.Shield:
+                        coroutine = StartCoroutine(Util.TimedAction(() => ActivateShield(true), () => ActivateShield(false), pickUp.EffectDuration));
                         break;
                     case PickUpType.ExtraLife:
                         coroutine = StartCoroutine(Util.TimedAction(null, () => {
