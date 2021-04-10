@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Pickup
   - Trap
+  - ScrollBG
   layers:
   - Default
   - TransparentFX

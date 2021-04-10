@@ -68,7 +68,8 @@ namespace SafeSurfing
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject != Parent && !collision.CompareTag("Pickup") && !collision.CompareTag("Trap"))
+            if (collision.gameObject != Parent && !collision.CompareTag("Pickup") && !collision.CompareTag("Trap")
+            && !collision.CompareTag("ScrollBG"))
             {
                 if (collision.CompareTag("Bounds"))
                     Destroy(gameObject, 0.1f);
