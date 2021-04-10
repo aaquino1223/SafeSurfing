@@ -28,7 +28,8 @@ namespace SafeSurfing
         private BulletSpawner _BulletSpawner;
         private Dictionary<PickUpType, Coroutine> _PickUpCoroutineDictionary;
 
-        public SpriteRenderer _Shield;
+        public GameObject _Shield;
+        public LaserController _LaserController;
         //private HealthController _HealthController;
 
         // Start is called before the first frame update
@@ -42,11 +43,13 @@ namespace SafeSurfing
 
             AddLifeLostListener(OnLifeLost, true);
             AddLifeGainedListener(OnLifeGained);
+
+            _Shield.SetActive(false);
         }
 
         private void OnLifeLost()
         {
-            SetIgnoreBullets(3f, false);
+            SetIgnoreDamage(3f, false, true);
 
             if (IsDead)
                 OnDestroyed();
@@ -65,7 +68,9 @@ namespace SafeSurfing
 
             if (IsPressingSpace)
                 _BulletSpawner.Shoot();
-            
+
+            if (Input.GetKey(KeyCode.X))
+                _LaserController.ShootLaser();
             //// Game Manager can probably handle this
             //if (PlayerLives <= 0) 
             //{
@@ -100,12 +105,10 @@ namespace SafeSurfing
             _BulletSpawner.BulletSpeed = bulletSpeed;
         }
         public void ActivateShield(bool state){
-            _Shield.enabled = state;
+            _Shield.SetActive(state);
             if (state)
-                SetIgnoreBullets(5f, true);
+                SetIgnoreDamage(5f, true);
         }
-
-
 
         protected override void OnTriggerCollison(Collider2D collision)
         {

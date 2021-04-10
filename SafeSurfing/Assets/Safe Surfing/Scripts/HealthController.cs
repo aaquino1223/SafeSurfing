@@ -20,10 +20,10 @@ namespace SafeSurfing
         public bool IsDead => Lives == 0;
         public bool IsIgnoringDamage { get; private set; }
 
-        public void SetIgnoreBullets(float ignoreTime, bool hasShield)
+        public void SetIgnoreDamage(float ignoreTime, bool hasShield = false, bool flashDamage = false)
         {
             StartCoroutine(Util.TimedAction(
-                () => { IsIgnoringDamage = true; if (!hasShield) StartCoroutine(FlashOnDamage()); },
+                () => { IsIgnoringDamage = true; if (!hasShield && flashDamage) StartCoroutine(FlashOnDamage()); },
                 () => IsIgnoringDamage = false,
                 ignoreTime
                 ));
@@ -57,11 +57,20 @@ namespace SafeSurfing
                 {
                     var bulletController = collision.gameObject.GetComponent<BulletController>();
 
-                    if (bulletController.ParentTag == tag)
+                    if (bulletController?.ParentTag == tag)
                         return;
                 }
 
                 OnDamaged();
+            }
+        }
+
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Laser") && !IsIgnoringDamage)
+            {
+                OnDamaged();
+                SetIgnoreDamage(0.5f);
             }
         }
 

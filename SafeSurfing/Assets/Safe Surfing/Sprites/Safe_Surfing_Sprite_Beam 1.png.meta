@@ -1,0 +1,1829 @@
+fileFormatVersion: 2
+guid: a4d745b3837336b45b01a43e03fcd24f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1992740024888397198
+    second: Safe_Surfing_Sprite_Beam_0
+  - first:
+      213: -4788716629946558299
+    second: Safe_Surfing_Sprite_Beam_1
+  - first:
+      213: 3567042583149892051
+    second: Safe_Surfing_Sprite_Beam_2
+  - first:
+      213: 902934932807758
+    second: Safe_Surfing_Sprite_Beam_3
+  - first:
+      213: 3330383295853181205
+    second: Safe_Surfing_Sprite_Beam_4
+  - first:
+      213: 4676643050579234230
+    second: Safe_Surfing_Sprite_Beam_5
+  - first:
+      213: 4796212688308522225
+    second: Safe_Surfing_Sprite_Beam_6
+  - first:
+      213: -5607882013333172731
+    second: Safe_Surfing_Sprite_Beam_7
+  - first:
+      213: -5374302348148371859
+    second: Safe_Surfing_Sprite_Beam_8
+  - first:
+      213: 2074087271833481023
+    second: Safe_Surfing_Sprite_Beam_9
+  - first:
+      213: 5798519108869150090
+    second: Safe_Surfing_Sprite_Beam_10
+  - first:
+      213: 2721365910175267198
+    second: Safe_Surfing_Sprite_Beam_11
+  - first:
+      213: 4497236248662850333
+    second: Safe_Surfing_Sprite_Beam_12
+  - first:
+      213: -6077902738693542292
+    second: Safe_Surfing_Sprite_Beam_13
+  - first:
+      213: -7762154646800124028
+    second: Safe_Surfing_Sprite_Beam_14
+  - first:
+      213: 7135694809956624855
+    second: Safe_Surfing_Sprite_Beam_15
+  - first:
+      213: -3555169213585940104
+    second: Safe_Surfing_Sprite_Beam_16
+  - first:
+      213: 1664798233259596855
+    second: Safe_Surfing_Sprite_Beam_17
+  - first:
+      213: 5912540481058324479
+    second: Safe_Surfing_Sprite_Beam_18
+  - first:
+      213: -2269480726845209221
+    second: Safe_Surfing_Sprite_Beam_19
+  - first:
+      213: 7040268973393909490
+    second: Safe_Surfing_Sprite_Beam 1_0
+  - first:
+      213: 6833688851943618972
+    second: Safe_Surfing_Sprite_Beam 1_1
+  - first:
+      213: 2597780905072250225
+    second: Safe_Surfing_Sprite_Beam 1_2
+  - first:
+      213: -1085057067736806889
+    second: Safe_Surfing_Sprite_Beam 1_3
+  - first:
+      213: 953666638274435994
+    second: Safe_Surfing_Sprite_Beam 1_4
+  - first:
+      213: -2376349855836428209
+    second: Safe_Surfing_Sprite_Beam 1_5
+  - first:
+      213: -7767926729050949541
+    second: Safe_Surfing_Sprite_Beam 1_6
+  - first:
+      213: -4447538785982868520
+    second: Safe_Surfing_Sprite_Beam 1_7
+  - first:
+      213: -5322286277128411528
+    second: Safe_Surfing_Sprite_Beam 1_8
+  - first:
+      213: 3642536096923457618
+    second: Safe_Surfing_Sprite_Beam 1_9
+  - first:
+      213: 1659430629530367920
+    second: Safe_Surfing_Sprite_Beam 1_10
+  - first:
+      213: -4669081476638898657
+    second: Safe_Surfing_Sprite_Beam 1_11
+  - first:
+      213: -1693779950769788631
+    second: Safe_Surfing_Sprite_Beam 1_12
+  - first:
+      213: -6658310584857751937
+    second: Safe_Surfing_Sprite_Beam 1_13
+  - first:
+      213: 6570635180919501691
+    second: Safe_Surfing_Sprite_Beam 1_14
+  - first:
+      213: -4424210421386798152
+    second: Safe_Surfing_Sprite_Beam 1_15
+  - first:
+      213: 3764647644136061107
+    second: Safe_Surfing_Sprite_Beam 1_16
+  - first:
+      213: 7904914411961858439
+    second: Safe_Surfing_Sprite_Beam 1_17
+  - first:
+      213: 3721980190935721549
+    second: Safe_Surfing_Sprite_Beam 1_18
+  - first:
+      213: 2668424539215033395
+    second: Safe_Surfing_Sprite_Beam 1_19
+  - first:
+      213: 6840579191080028208
+    second: Safe_Surfing_Sprite_Beam 1_20
+  - first:
+      213: 5483123023646834177
+    second: Safe_Surfing_Sprite_Beam 1_21
+  - first:
+      213: -2733751467034147833
+    second: Safe_Surfing_Sprite_Beam 1_22
+  - first:
+      213: 7203757943777588549
+    second: Safe_Surfing_Sprite_Beam 1_23
+  - first:
+      213: 2593047582381031981
+    second: Safe_Surfing_Sprite_Beam 1_24
+  - first:
+      213: -3820213443032027939
+    second: Safe_Surfing_Sprite_Beam 1_25
+  - first:
+      213: 5552325129636612112
+    second: Safe_Surfing_Sprite_Beam 1_26
+  - first:
+      213: 9015988294661956510
+    second: Safe_Surfing_Sprite_Beam 1_27
+  - first:
+      213: -4261284635525928319
+    second: Safe_Surfing_Sprite_Beam 1_28
+  - first:
+      213: -1372523849128834728
+    second: Safe_Surfing_Sprite_Beam 1_29
+  - first:
+      213: 6998684859677630032
+    second: Safe_Surfing_Sprite_Beam 1_30
+  - first:
+      213: -4873656000697756427
+    second: Safe_Surfing_Sprite_Beam 1_31
+  - first:
+      213: 539265661066420283
+    second: Safe_Surfing_Sprite_Beam 1_32
+  - first:
+      213: 930145376871735172
+    second: Safe_Surfing_Sprite_Beam 1_33
+  - first:
+      213: -9124724562537999798
+    second: Safe_Surfing_Sprite_Beam 1_34
+  - first:
+      213: -5209157873408423627
+    second: Safe_Surfing_Sprite_Beam 1_35
+  - first:
+      213: 8763457614106178237
+    second: Safe_Surfing_Sprite_Beam 1_36
+  - first:
+      213: -512411500961171807
+    second: Safe_Surfing_Sprite_Beam 1_37
+  - first:
+      213: 7004029123019377500
+    second: Safe_Surfing_Sprite_Beam 1_38
+  - first:
+      213: 2617495482169067788
+    second: Safe_Surfing_Sprite_Beam 1_39
+  - first:
+      213: -8034095073237577462
+    second: Safe_Surfing_Sprite_Beam 1_40
+  - first:
+      213: 5625646629531351188
+    second: Safe_Surfing_Sprite_Beam 1_41
+  - first:
+      213: 4025306470143639708
+    second: Safe_Surfing_Sprite_Beam 1_42
+  - first:
+      213: 2284225443423206437
+    second: Safe_Surfing_Sprite_Beam 1_43
+  - first:
+      213: 2273264441023151462
+    second: Safe_Surfing_Sprite_Beam 1_44
+  - first:
+      213: 5803906520969354405
+    second: Safe_Surfing_Sprite_Beam 1_45
+  - first:
+      213: -797128009696916757
+    second: Safe_Surfing_Sprite_Beam 1_46
+  - first:
+      213: -7302501913908632913
+    second: Safe_Surfing_Sprite_Beam 1_47
+  - first:
+      213: -5939204005065724527
+    second: Safe_Surfing_Sprite_Beam 1_48
+  - first:
+      213: 739259943362599944
+    second: Safe_Surfing_Sprite_Beam 1_49
+  - first:
+      213: 8537029188791401642
+    second: Safe_Surfing_Sprite_Beam 1_50
+  - first:
+      213: -1367182556470030600
+    second: Safe_Surfing_Sprite_Beam 1_51
+  - first:
+      213: -930453258005302415
+    second: Safe_Surfing_Sprite_Beam 1_52
+  - first:
+      213: 5576517484611201570
+    second: Safe_Surfing_Sprite_Beam 1_53
+  - first:
+      213: -2651226825668264863
+    second: Safe_Surfing_Sprite_Beam 1_54
+  - first:
+      213: -4184297149379231005
+    second: Safe_Surfing_Sprite_Beam 1_55
+  - first:
+      213: -9199104756092210886
+    second: Safe_Surfing_Sprite_Beam 1_56
+  - first:
+      213: -269197263075037302
+    second: Safe_Surfing_Sprite_Beam 1_57
+  - first:
+      213: -8922070807709193357
+    second: Safe_Surfing_Sprite_Beam 1_58
+  - first:
+      213: 6426238990249059761
+    second: Safe_Surfing_Sprite_Beam 1_0
+  - first:
+      213: -8964896731423080890
+    second: Safe_Surfing_Sprite_Beam 1_1
+  - first:
+      213: -7196904114323446155
+    second: Safe_Surfing_Sprite_Beam 1_2
+  - first:
+      213: -8389302270412906003
+    second: Safe_Surfing_Sprite_Beam 1_3
+  - first:
+      213: -1275212997487401702
+    second: Safe_Surfing_Sprite_Beam 1_4
+  - first:
+      213: 5282524061820524567
+    second: Safe_Surfing_Sprite_Beam 1_5
+  - first:
+      213: -1318297204269544054
+    second: Safe_Surfing_Sprite_Beam 1_6
+  - first:
+      213: -6017643846392807370
+    second: Safe_Surfing_Sprite_Beam 1_7
+  - first:
+      213: -3956161504531563060
+    second: Safe_Surfing_Sprite_Beam 1_8
+  - first:
+      213: -8004054575202764021
+    second: Safe_Surfing_Sprite_Beam 1_9
+  - first:
+      213: -6911950577763373397
+    second: Safe_Surfing_Sprite_Beam 1_10
+  - first:
+      213: -4899520279801003564
+    second: Safe_Surfing_Sprite_Beam 1_11
+  - first:
+      213: 2773425695028037832
+    second: Safe_Surfing_Sprite_Beam 1_12
+  - first:
+      213: -2049535507530757052
+    second: Safe_Surfing_Sprite_Beam 1_13
+  - first:
+      213: -1710252377634631440
+    second: Safe_Surfing_Sprite_Beam 1_14
+  - first:
+      213: -1514828390239432650
+    second: Safe_Surfing_Sprite_Beam 1_15
+  - first:
+      213: 21708530412315396
+    second: Safe_Surfing_Sprite_Beam 1_16
+  - first:
+      213: 2511966484347263343
+    second: Safe_Surfing_Sprite_Beam 1_17
+  - first:
+      213: -8112211796952931728
+    second: Safe_Surfing_Sprite_Beam 1_18
+  - first:
+      213: 4566145436897547598
+    second: Safe_Surfing_Sprite_Beam 1_19
+  - first:
+      213: -1522573878616843748
+    second: Safe_Surfing_Sprite_Beam 1_20
+  - first:
+      213: -554326217376736481
+    second: Safe_Surfing_Sprite_Beam 1_21
+  - first:
+      213: -7900255512579864619
+    second: Safe_Surfing_Sprite_Beam 1_22
+  - first:
+      213: -8446134233419475241
+    second: Safe_Surfing_Sprite_Beam 1_23
+  - first:
+      213: -5307846063459358541
+    second: Safe_Surfing_Sprite_Beam 1_24
+  - first:
+      213: 3590544382751718389
+    second: Safe_Surfing_Sprite_Beam 1_25
+  - first:
+      213: -3556046470337699138
+    second: Safe_Surfing_Sprite_Beam 1_26
+  - first:
+      213: -3826913370595242679
+    second: Safe_Surfing_Sprite_Beam 1_27
+  - first:
+      213: -9051996417719084826
+    second: Safe_Surfing_Sprite_Beam 1_28
+  - first:
+      213: 993085403360042844
+    second: Safe_Surfing_Sprite_Beam 1_29
+  - first:
+      213: -7086571549203681278
+    second: Safe_Surfing_Sprite_Beam 1_30
+  - first:
+      213: -3494030005041205549
+    second: Safe_Surfing_Sprite_Beam 1_31
+  - first:
+      213: 7891535800700436836
+    second: Safe_Surfing_Sprite_Beam 1_32
+  - first:
+      213: 7289928517475071057
+    second: Safe_Surfing_Sprite_Beam 1_33
+  - first:
+      213: 4230101383016374350
+    second: Safe_Surfing_Sprite_Beam 1_34
+  - first:
+      213: -23844635139038968
+    second: Safe_Surfing_Sprite_Beam 1_35
+  - first:
+      213: -3095246134293831762
+    second: Safe_Surfing_Sprite_Beam 1_36
+  - first:
+      213: -5092883247161616256
+    second: Safe_Surfing_Sprite_Beam 1_37
+  - first:
+      213: 2030854616109672531
+    second: Safe_Surfing_Sprite_Beam 1_38
+  - first:
+      213: 2920355316876616878
+    second: Safe_Surfing_Sprite_Beam 1_39
+  - first:
+      213: -8286360246417591072
+    second: Safe_Surfing_Sprite_Beam 1_40
+  - first:
+      213: -5321628382665465492
+    second: Safe_Surfing_Sprite_Beam 1_41
+  - first:
+      213: -7608363047291279902
+    second: Safe_Surfing_Sprite_Beam 1_42
+  - first:
+      213: -1903440437335973835
+    second: Safe_Surfing_Sprite_Beam 1_43
+  - first:
+      213: -2592345869806979312
+    second: Safe_Surfing_Sprite_Beam 1_44
+  - first:
+      213: -3042857397030464993
+    second: Safe_Surfing_Sprite_Beam 1_45
+  - first:
+      213: 5728793335585672086
+    second: Safe_Surfing_Sprite_Beam 1_46
+  - first:
+      213: 3805878141541153851
+    second: Safe_Surfing_Sprite_Beam 1_47
+  - first:
+      213: 8541347161695160567
+    second: Safe_Surfing_Sprite_Beam 1_48
+  - first:
+      213: -156707746579877553
+    second: Safe_Surfing_Sprite_Beam 1_49
+  - first:
+      213: 1046583502020543232
+    second: Safe_Surfing_Sprite_Beam 1_50
+  - first:
+      213: 3129885651106507568
+    second: Safe_Surfing_Sprite_Beam 1_51
+  - first:
+      213: -7617679106699641506
+    second: Safe_Surfing_Sprite_Beam 1_52
+  - first:
+      213: -7386476779588684536
+    second: Safe_Surfing_Sprite_Beam 1_53
+  - first:
+      213: -6523202099495429478
+    second: Safe_Surfing_Sprite_Beam 1_54
+  - first:
+      213: -3222529626018258104
+    second: Safe_Surfing_Sprite_Beam 1_55
+  - first:
+      213: -7936457730740897300
+    second: Safe_Surfing_Sprite_Beam 1_56
+  - first:
+      213: 8380878771025063570
+    second: Safe_Surfing_Sprite_Beam 1_57
+  - first:
+      213: 3894739048722799521
+    second: Safe_Surfing_Sprite_Beam 1_58
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b56f8f50569e2950800000000000000
+      internalID: 6426238990249059761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e777bbbe9469380800000000000000
+      internalID: -8964896731423080890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576243fb6d57f1c90800000000000000
+      internalID: -7196904114323446155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de129a29806339b80800000000000000
+      internalID: -8389302270412906003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a156dcff8888d4ee0800000000000000
+      internalID: -1275212997487401702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718144e65ab4f4940800000000000000
+      internalID: 5282524061820524567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d8f176da774bde0800000000000000
+      internalID: -1318297204269544054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63001f6fdc80d7ca0800000000000000
+      internalID: -6017643846392807370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd32508214e819c0800000000000000
+      internalID: -3956161504531563060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bf23a65c2ebe090800000000000000
+      internalID: -8004054575202764021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeab531291d310a0800000000000000
+      internalID: -6911950577763373397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d183a8a348610cb0800000000000000
+      internalID: -4899520279801003564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c84613b9ff2d7620800000000000000
+      internalID: 2773425695028037832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c441790569e83e0800000000000000
+      internalID: -2049535507530757052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f012da1686f348e0800000000000000
+      internalID: -1710252377634631440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6301a10ea9f3afae0800000000000000
+      internalID: -1514828390239432650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40362db1bcf1d4000800000000000000
+      internalID: 21708530412315396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f699433653c4cd220800000000000000
+      internalID: 2511966484347263343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_18
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07223ebd952ab6f80800000000000000
+      internalID: -8112211796952931728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e459c0715153e5f30800000000000000
+      internalID: 4566145436897547598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a11c4df1bbedae0800000000000000
+      internalID: -1522573878616843748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bd2930e33ae48f0800000000000000
+      internalID: -554326217376736481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d70bd9f777ac5290800000000000000
+      internalID: -7900255512579864619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d614cb0aad49ca80800000000000000
+      internalID: -8446134233419475241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_24
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8ac01a02eb656b0800000000000000
+      internalID: -5307846063459358541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbb034b71d24d130800000000000000
+      internalID: 3590544382751718389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_26
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb26db2739266aec0800000000000000
+      internalID: -3556046470337699138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d4a77b09214eac0800000000000000
+      internalID: -3826913370595242679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8deb5b739d06280800000000000000
+      internalID: -9051996417719084826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f96eaa9e528cd00800000000000000
+      internalID: 993085403360042844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2003356e8b077ad90800000000000000
+      internalID: -7086571549203681278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de66faf836b28fc0800000000000000
+      internalID: -3494030005041205549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_32
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4610705effd548d60800000000000000
+      internalID: 7891535800700436836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154771aec570b2560800000000000000
+      internalID: 7289928517475071057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_34
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40649abbc654ba30800000000000000
+      internalID: 4230101383016374350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8012db04e694baff0800000000000000
+      internalID: -23844635139038968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_36
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafd3094a0a7b05d0800000000000000
+      internalID: -3095246134293831762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088d4628ba17259b0800000000000000
+      internalID: -5092883247161616256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_38
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358edaf638b0f2c10800000000000000
+      internalID: 2030854616109672531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4aa5020bf278820800000000000000
+      internalID: 2920355316876616878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_40
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e47c57424fe00d80800000000000000
+      internalID: -8286360246417591072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61a6906e27c526b0800000000000000
+      internalID: -5321628382665465492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_42
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5aefb8e1aa96690800000000000000
+      internalID: -7608363047291279902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530a971d10f9595e0800000000000000
+      internalID: -1903440437335973835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_44
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017343f8a23260cd0800000000000000
+      internalID: -2592345869806979312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_45
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1254d3b15995c5d0800000000000000
+      internalID: -3042857397030464993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_46
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b853faf23c08f40800000000000000
+      internalID: 5728793335585672086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cfbfc510231d430800000000000000
+      internalID: 3805878141541153851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_48
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f881245df5f88670800000000000000
+      internalID: 8541347161695160567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41fd8f722343ddf0800000000000000
+      internalID: -156707746579877553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00308b96626368e00800000000000000
+      internalID: 1046583502020543232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03babc5ba669f6b20800000000000000
+      internalID: 3129885651106507568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_52
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5db0407631984690800000000000000
+      internalID: -7617679106699641506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805f1f21186fd7990800000000000000
+      internalID: -7386476779588684536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a1e7d704ee875a0800000000000000
+      internalID: -6523202099495429478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843620bf0664743d0800000000000000
+      internalID: -3222529626018258104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_56
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce939483eb90cd190800000000000000
+      internalID: -7936457730740897300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29eaf84a6dcde4470800000000000000
+      internalID: 8380878771025063570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe_Surfing_Sprite_Beam 1_58
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab17f39784ec0630800000000000000
+      internalID: 3894739048722799521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9d93f81ab4c04ec448ec75858f9fffd7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

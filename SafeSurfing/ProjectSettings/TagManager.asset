@@ -10,6 +10,8 @@ TagManager:
   - Pickup
   - Trap
   - ScrollBG
+  - Special
+  - Laser
   layers:
   - Default
   - TransparentFX
