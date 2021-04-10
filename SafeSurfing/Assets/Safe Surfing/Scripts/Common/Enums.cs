@@ -21,6 +21,12 @@ namespace SafeSurfing.Common.Enums
         Trojan = 1 << 4
     }
 
+    public enum TrapType
+    {
+        Pull,
+        Slow
+    }
+
     public enum JITType
     {
         Tutorial,

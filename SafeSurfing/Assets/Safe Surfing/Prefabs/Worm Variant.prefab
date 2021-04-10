@@ -12,6 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Worm Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3496359801612778435, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7486427855368567076, guid: 284a99d9595e22b418f7d9c1d4badb14,
+        type: 3}
+    - target: {fileID: 3496359801612778435, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3496359801612778444, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
         type: 3}
       propertyPath: m_LocalPosition.x

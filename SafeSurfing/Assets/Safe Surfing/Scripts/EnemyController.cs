@@ -59,7 +59,7 @@ namespace SafeSurfing
             _Current = 0;
 
             //_HealthController = GetComponent<HealthController>();
-            AddLifeLostListener(OnLifeLost);
+            AddLifeLostListener(OnLifeLost, true);
         }
 
         private void OnLifeLost()

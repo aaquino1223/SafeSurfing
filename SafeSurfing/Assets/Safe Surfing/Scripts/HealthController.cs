@@ -22,7 +22,7 @@ namespace SafeSurfing
         public void SetIgnoreBullets(float ignoreTime)
         {
             StartCoroutine(Util.TimedAction(
-                () => IsIgnoringDamage = true,
+                () => { IsIgnoringDamage = true; StartCoroutine(FlashOnDamage()); },
                 () => IsIgnoringDamage = false,
                 ignoreTime
                 ));
@@ -61,17 +61,14 @@ namespace SafeSurfing
             if (!IsDead)
             {
                 Lives--;
-                LifeLost?.Invoke();
 
-                if (IsDead){
+                if (IsDead)
+                {
                     var explosion = Instantiate(ExplosionPrefab, transform.position, transform.rotation, transform.parent);
                     Destroy(explosion, 0.7f);
                     AllLivesLost?.Invoke();
                 }
                 else
-                if(IsIgnoringDamage){
-                    StartCoroutine(FlashOnDamage());
-                }
                     LifeLost?.Invoke();
             }
         }

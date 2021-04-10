@@ -1,6 +1,7 @@
 ﻿using SafeSurfing.Common;
 using SafeSurfing.Common.Enums;
 using SafeSurfing.Common.Interfaces;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,19 +20,21 @@ namespace SafeSurfing
         public Vector3 Heading => transform.up;
 
         public bool IsMoving { get { return _Horizontal != 0 || _Vertical != 0; } }
-
+        private Dictionary<PullController, Vector3> _PullVectorDictionary;
 
         private float _Horizontal;
         private float _Vertical;
 
         private BulletSpawner _BulletSpawner;
         private Dictionary<PickUpType, Coroutine> _PickUpCoroutineDictionary;
+
         //private HealthController _HealthController;
 
         // Start is called before the first frame update
         void Start()
         {
             _PickUpCoroutineDictionary = new Dictionary<PickUpType, Coroutine>();
+            _PullVectorDictionary = new Dictionary<PullController, Vector3>();
             _BulletSpawner = GetComponent<BulletSpawner>();
 
             //_HealthController = GetComponent<HealthController>();
@@ -64,7 +67,7 @@ namespace SafeSurfing
 
         private void FixedUpdate()
         {
-            var newPosition = new Vector3();
+            var newPosition = Vector3.zero;
             var deltaTime = Time.deltaTime;
             var localX = transform.localPosition.x;
             var localY = transform.localPosition.y;
@@ -73,7 +76,11 @@ namespace SafeSurfing
             else
                 newPosition = new Vector3(localX, localY - FallSpeed * deltaTime, 0);
 
-            transform.localPosition = newPosition;
+            var pullOffset = Vector3.zero;
+
+            _PullVectorDictionary.Values.ToList().ForEach(x => pullOffset += x);
+
+            transform.localPosition = newPosition + pullOffset * deltaTime;
         }
 
         public void SetFiringRate(float firingRate){
@@ -125,6 +132,32 @@ namespace SafeSurfing
             }
         }
 
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Trap"))
+            {
+                PullController pullController;
+
+                if (collision.gameObject.TryGetComponent(out pullController))
+                {
+                    var pullVector = pullController.GetEffect(gameObject);
+
+                    _PullVectorDictionary[pullController] = pullVector;
+                }
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Trap"))
+            {
+                PullController pullController;
+
+                if (collision.gameObject.TryGetComponent(out pullController))
+                    if (_PullVectorDictionary.ContainsKey(pullController))
+                    _PullVectorDictionary.Remove(pullController);
+            }
+        }
     }
 
     

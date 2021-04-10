@@ -47,13 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PickUpSprites:
   - PickUpType: 2
-    Sprite: {fileID: 7972232649138161333, guid: f9d33bc6a45326441b139369b38432cc,
+    Sprite: {fileID: -7906380028426127089, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
   - PickUpType: 1
-    Sprite: {fileID: 5860460993067333106, guid: f9d33bc6a45326441b139369b38432cc,
+    Sprite: {fileID: 5860460993067333106, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
   - PickUpType: 4
-    Sprite: {fileID: -2149529177950956658, guid: f9d33bc6a45326441b139369b38432cc,
+    Sprite: {fileID: -2149529177950956658, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
   EffectDuration: 5
   TrojanPrefab: {fileID: 4374667652156026736, guid: a49e5e04ea65b504d93f36239e8fa226,
