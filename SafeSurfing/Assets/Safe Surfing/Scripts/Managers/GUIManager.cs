@@ -55,8 +55,8 @@ namespace SafeSurfing
 
         private void OnLevelChanged()
         {
-            // Add Level variable
-            // LevelText.text = "Level " + Level;
+            var levelNum = Spawner.LevelIndex + 1;
+            LevelText.text = "Level " + levelNum;
         }
 
         private void OnScoreChanged()

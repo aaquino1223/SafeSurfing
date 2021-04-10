@@ -54,6 +54,7 @@ namespace SafeSurfing
 
         private void NextLevel()
         {
+            WaveIndex = -1;
             LevelIndex++;
             LevelChanged?.Invoke();
 
