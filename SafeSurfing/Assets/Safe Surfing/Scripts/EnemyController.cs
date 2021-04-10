@@ -16,6 +16,8 @@ namespace SafeSurfing
         private IEnumerable<Vector3> _Pattern;
         private int _Current;
 
+        public bool IgnoreBounds { get; protected set; }
+
         //State get/set manages private _State. In set, if value is different, _Pattern is refreshed
         private EnemyState _State;
         public EnemyState State
@@ -114,7 +116,7 @@ namespace SafeSurfing
             if (State != EnemyState.Normal)
                 return;
 
-            if (collision.CompareTag("Bounds"))
+            if (collision.CompareTag("Bounds") && !IgnoreBounds)
             {
                 Points = 0;
                 StartCoroutine(Util.TimedAction(null, OnDestroyed, 0.5f));

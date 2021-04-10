@@ -55,6 +55,9 @@ MonoBehaviour:
   - PickUpType: 4
     Sprite: {fileID: -2149529177950956658, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
+  - PickUpType: 8
+    Sprite: {fileID: 7972232649138161333, guid: 284a99d9595e22b418f7d9c1d4badb14,
+      type: 3}
   EffectDuration: 5
   TrojanPrefab: {fileID: 4374667652156026736, guid: a49e5e04ea65b504d93f36239e8fa226,
     type: 3}
