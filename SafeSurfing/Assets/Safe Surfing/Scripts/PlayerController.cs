@@ -40,13 +40,16 @@ namespace SafeSurfing
 
             //_HealthController = GetComponent<HealthController>();
 
-            AddLifeLostListener(OnLifeLost);
+            AddLifeLostListener(OnLifeLost, true);
             AddLifeGainedListener(OnLifeGained);
         }
 
         private void OnLifeLost()
         {
             SetIgnoreBullets(3f, false);
+
+            if (IsDead)
+                OnDestroyed();
         }
 
         private void OnLifeGained()
@@ -180,7 +183,11 @@ namespace SafeSurfing
                     _PullVectorDictionary.Remove(pullController);
             }
         }
-    }
 
-    
+        protected virtual void OnDestroyed()
+        {
+            Destroy(gameObject);
+        }
+
+    }
 }
