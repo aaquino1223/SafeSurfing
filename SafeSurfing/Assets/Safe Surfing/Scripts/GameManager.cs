@@ -71,7 +71,7 @@ namespace SafeSurfing
             if (_PickUpCoroutine != null)
                 StopCoroutine(_PickUpCoroutine);
 
-            SpawnPickupRecursive();
+            StartCoroutine(Util.TimedAction(null, SpawnPickupRecursive, WaveSpawnDelay));
         }
         private void NextWave()
         {
