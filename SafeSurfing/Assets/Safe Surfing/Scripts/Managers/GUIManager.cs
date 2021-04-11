@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using SafeSurfing.Common;
 
 namespace SafeSurfing
 {
@@ -12,13 +13,27 @@ namespace SafeSurfing
         public Image[] Lives;
         public GameObject Player;
         private HealthController _HealthController;
-        public GameManager Spawner;
+
+        public GameManager GameManager;
 
         //Level variable
         //Score variable
         public TextMeshProUGUI WaveText;
         public TextMeshProUGUI LevelText;
         public TextMeshProUGUI ScoreText;
+
+        private void Awake()
+        {
+            if (GameManager != null)
+            {
+                GameManager.WaveChanged.AddListener(OnWaveChanged);
+                GameManager.LevelChanged.AddListener(OnLevelChanged);
+                GameManager.ScoreChanged.AddListener(OnScoreChanged);
+            }
+
+            SetLevelTextActive(false);
+            SetWaveTextActive(false);
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -36,13 +51,10 @@ namespace SafeSurfing
                 _HealthController.AddLifeGainedListener(OnPlayerLifeGained);
             }
 
-            if(Spawner != null)
-            {
-                Spawner.WaveChanged.AddListener(OnWaveChanged);
-                Spawner.LevelChanged.AddListener(OnLevelChanged);
-                Spawner.ScoreChanged.AddListener(OnScoreChanged);
-            }
         }
+
+        private void SetLevelTextActive(bool value) => LevelText.gameObject.SetActive(value);
+        private void SetWaveTextActive(bool value) => WaveText.gameObject.SetActive(value);
 
         private void OnPlayerLifeLost()
         {
@@ -53,23 +65,27 @@ namespace SafeSurfing
         {
             Lives[_HealthController.Lives - 1].enabled = true;
         }
-        private void OnWaveChanged()
-        {
-            //comes from enemyspawner
-            var waveNum = Spawner.WaveIndex + 1;
-            WaveText.text = "Wave " + waveNum;
-        }
 
         private void OnLevelChanged()
         {
-            var levelNum = Spawner.LevelIndex + 1;
+            var levelNum = GameManager.LevelIndex + 1;
             LevelText.text = "Level " + levelNum;
+
+            StartCoroutine(Util.TimedAction(() => SetLevelTextActive(true), () => SetLevelTextActive(false), GameManager.WaveSpawnDelay));
+        }
+
+        private void OnWaveChanged()
+        {
+            //comes from enemyspawner
+            var waveNum = GameManager.WaveIndex + 1;
+            WaveText.text = "Wave " + waveNum;
+            StartCoroutine(Util.TimedAction(() => SetWaveTextActive(true), () => SetWaveTextActive(false), GameManager.WaveSpawnDelay));
         }
 
         private void OnScoreChanged()
         {
             // Add Score variable
-           ScoreText.text = "Score: " + Spawner.Score;
+           ScoreText.text = "Score: " + GameManager.Score;
         }
 
 

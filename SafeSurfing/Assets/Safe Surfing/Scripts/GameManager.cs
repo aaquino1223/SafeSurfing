@@ -27,6 +27,7 @@ namespace SafeSurfing
         public LevelBehavior[] Levels;
         public int WaveIndex { get; private set; } = -1;
         public int LevelIndex { get; private set; } = -1;
+        public float WaveSpawnDelay = 3f;
 
         private int _EnemyDestroyed = 0;
         private int _ExpectedSpawnCount = 0;
@@ -122,7 +123,7 @@ namespace SafeSurfing
                     EnemySpawned?.Invoke();
                 };
 
-                StartCoroutine(Util.TimedAction(null, action, spawnPoint.Time));
+                StartCoroutine(Util.TimedAction(null, action, spawnPoint.Time + WaveSpawnDelay));
             }
         }
 
