@@ -24,5 +24,6 @@ namespace SafeSurfing
     {
         public float Time;
         public GameObject EnemyPrefab;
+        public JustInTimeInstruction JustInTime;
     }
 }

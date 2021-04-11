@@ -8,44 +8,49 @@ namespace SafeSurfing
 {
     public class JITInstructionManager : MonoBehaviour
     {
-    // Start is called before the first frame update
+        // Start is called before the first frame update
         public TextMeshProUGUI TitleText;
         public TextMeshProUGUI TextToShow;
 
         public GameObject Background;
 
-    
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (IsPressingSpace){
-            CloseJIT();
+        void Start()
+        {
+
         }
-                
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (IsPressingSpace)
+            {
+                CloseJIT();
+            }
+
+        }
+
+        public void UpdateJITController(JustInTimeInstruction jit)
+        {
+            TitleText.text = jit.Title;
+            TextToShow.text = jit.Text;
+        }
+
+        public void OpenJIT()
+        {
+            gameObject.SetActive(true);
+            //pause game
+            Time.timeScale = 0f;
+        }
+
+        public void CloseJIT()
+        {
+            if (gameObject.activeInHierarchy)
+            {
+                gameObject.SetActive(false);
+                Time.timeScale = 1f;
+            }
+        }
     }
-
-    public void UpdateJITController(string title, string text){
-        TitleText.text = title;
-        TextToShow.text = text;
-    }
-
-    public void OpenJIT(){
-        gameObject.SetActive(true);
-        //pause game
-        // Time.timeScale = 0f;
-    }
-
-    public void CloseJIT(){
-        gameObject.SetActive(false);
-    }
-
-
-    }
-
 }

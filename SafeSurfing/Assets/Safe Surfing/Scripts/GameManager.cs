@@ -75,10 +75,10 @@ namespace SafeSurfing
         private void NextWave()
         {
             // ONLY FOR TESTING PURPOSES
-            if(WaveIndex > -1){
-                _JITManager.UpdateJITController("Hello temp", "sample instructions");
-                _JITManager.OpenJIT();
-            }
+            //if(WaveIndex > -1){
+            //    _JITManager.UpdateJITController("Hello temp", "sample instructions");
+            //    _JITManager.OpenJIT();
+            //}
             
             WaveIndex++;
             WaveChanged?.Invoke();
@@ -109,6 +109,16 @@ namespace SafeSurfing
                     if (spawningController != null)
                         spawningController.SpawnedEnemies += SpawnedEnemies;
 
+                    if (spawnPoint.JustInTime != null)
+                        enemyController.StateChanged += (s, e) =>
+                        {
+                            if (e == EnemyState.Normal)
+                            {
+                                _JITManager.UpdateJITController(spawnPoint.JustInTime);
+                                _JITManager.OpenJIT();
+                            }
+                        };
+                    
                     EnemySpawned?.Invoke();
                 };
 
