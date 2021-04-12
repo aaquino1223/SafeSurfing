@@ -96,11 +96,13 @@ namespace SafeSurfing
                 if (_Current.TryGetComponent(out animator))
                     animator.SetBool("Open", true);
 
-                AudioPlayer.StopBackground();
                 if (audioClip != null)
                     AudioPlayer.PlayBackground(audioClip);
                 else if (oneShotAudioClip != null)
+                {
+                    AudioPlayer.StopBackground();
                     AudioPlayer.PlayOneShot(oneShotAudioClip);
+                }
             },
             previousTimeAfter));
 

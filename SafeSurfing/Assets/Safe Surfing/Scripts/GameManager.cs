@@ -12,6 +12,8 @@ namespace SafeSurfing
 {
     public class GameManager : MonoBehaviour
     {
+        public GameObject Player;
+
         public GameObject Screen;
 
         public GameObject PickUpPrefab;
@@ -24,6 +26,9 @@ namespace SafeSurfing
         public UnityEvent LevelChanged;
         public UnityEvent ScoreChanged;
         public UnityEvent PlayerWon;
+        public UnityEvent PlayerLost;
+
+        public bool GameWon { get; private set; }
 
         public LevelBehavior[] Levels;
         public int WaveIndex { get; private set; } = -1;
@@ -44,6 +49,36 @@ namespace SafeSurfing
 
         public AudioPlayer AudioPlayer;
 
+        private HealthController _PlayerHealth;
+
+        private HashSet<JustInTimeInstruction> _JITOpened = new HashSet<JustInTimeInstruction>();
+
+        private void OnEnable()
+        {
+            GameWon = false;
+            _EnemyDestroyed = 0;
+            _ExpectedSpawnCount = 0;
+            Score = 0;
+            WaveIndex = -1;
+            LevelIndex = -1;
+
+            foreach (Transform child in transform)
+                Destroy(child.gameObject);
+
+            var player = Instantiate(Player, Player.GetComponent<Transform>().position, transform.rotation, transform);
+
+            _PlayerHealth = player.GetComponent<HealthController>();
+            _PlayerHealth.AddLifeLostListener(OnPlayerLifeLost, true);
+
+            NextLevel();
+        }
+
+        private void OnPlayerLifeLost()
+        {
+            if (_PlayerHealth.IsDead)
+                PlayerLost?.Invoke();
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -52,8 +87,6 @@ namespace SafeSurfing
             //Using points array because values are not affected by the rotation of parent object
             _XMax = collider.points.Max(point => point.x);
             _YMax = collider.points.Max(point => point.y);
-
-            NextLevel();
         }
 
         private void NextLevel()
@@ -119,10 +152,13 @@ namespace SafeSurfing
                     if (spawnPoint.JustInTime != null)
                         enemyController.StateChanged += (s, e) =>
                         {
-                            if (e == EnemyState.Normal)
+                            var JIT = spawnPoint.JustInTime;
+                            if (e == EnemyState.Normal && !_JITOpened.Contains(JIT))
                             {
-                                JITInstructionManager.Instance.UpdateJITController(spawnPoint.JustInTime);
+                                JITInstructionManager.Instance.UpdateJITController(JIT);
                                 JITInstructionManager.Instance.OpenJIT();
+
+                                _JITOpened.Add(JIT);
                             }
                         };
                     
@@ -201,7 +237,10 @@ namespace SafeSurfing
                 else if (LevelIndex < Levels.Count() - 1)
                     NextLevel();
                 else
+                {
+                    GameWon = true;
                     PlayerWon?.Invoke();
+                }
             }
         }
 

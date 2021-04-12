@@ -6,8 +6,9 @@ using static SafeSurfing.Common.Constants.PlayerInput;
 
 namespace SafeSurfing
 {
-    public class StartMenuManager : MonoBehaviour
+    public class MenuManager : MonoBehaviour
     {
+        public string NextScene;
         //private AudioSource _TitleTheme;
         //public GameObject PlayableGame;
         //private float _TimeBeforeStart = 1.75f;
@@ -29,7 +30,7 @@ namespace SafeSurfing
                 //StartCoroutine(FadeAudioSource.StartFade(_TitleTheme, _TimeBeforeStart, 0f));
                 //_Transition.SetBool("Open", false);
                 //StartCoroutine(StartGame());
-                SceneManager.Instance.UpdateScene("Game");
+                SceneManager.Instance.UpdateScene(NextScene);
             }
 
         }
