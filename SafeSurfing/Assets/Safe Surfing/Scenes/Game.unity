@@ -429,7 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartMenu: {fileID: 1252654649}
   TimeAfterMenu: 2
-  StartMenuClip: {fileID: 8300000, guid: 48271d288f3c74777971a2b55678b37c, type: 3}
+  StartMenuClip: {fileID: 8300000, guid: bdacbdc80ec32074c963f4600106e941, type: 3}
   PlayableGame: {fileID: 967795221}
   TimeAfterGame: 1
   VictoryScreen: {fileID: 869801500}
