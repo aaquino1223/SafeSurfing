@@ -38,8 +38,6 @@ namespace SafeSurfing
         public int Score { get; private set; } = 0;
 
         private Dictionary<JITType, bool> _JITFlags;
-
-        public JITInstructionManager _JITManager;
         public float MinTimeBeforeSpawn = 10f;
         public float MaxTimeBeforeSpawn = 15f;
 
@@ -77,8 +75,8 @@ namespace SafeSurfing
         {
             // ONLY FOR TESTING PURPOSES
             //if(WaveIndex > -1){
-            //    _JITManager.UpdateJITController("Hello temp", "sample instructions");
-            //    _JITManager.OpenJIT();
+            //    JITInstructionManager.Instance.UpdateJITController("Hello temp", "sample instructions");
+            //    JITInstructionManager.Instance.OpenJIT();
             //}
             
             WaveIndex++;
@@ -115,8 +113,8 @@ namespace SafeSurfing
                         {
                             if (e == EnemyState.Normal)
                             {
-                                _JITManager.UpdateJITController(spawnPoint.JustInTime);
-                                _JITManager.OpenJIT();
+                                JITInstructionManager.Instance.UpdateJITController(spawnPoint.JustInTime);
+                                JITInstructionManager.Instance.OpenJIT();
                             }
                         };
                     

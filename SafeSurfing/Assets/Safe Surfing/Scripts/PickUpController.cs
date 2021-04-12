@@ -48,6 +48,11 @@ namespace SafeSurfing
 
         public event EventHandler<IEnumerable<EnemyController>> SpawnedEnemies;
 
+        private static HashSet<PickUpType> _JITOpened;
+        static PickUpController() 
+        {
+            _JITOpened = new HashSet<PickUpType>();
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -85,6 +90,17 @@ namespace SafeSurfing
             {
                 var trojanPrefab = Instantiate(TrojanPrefab, transform.position, Quaternion.identity, transform.parent);
                 SpawnedEnemies?.Invoke(this, new List<EnemyController>() { trojanPrefab.GetComponent<EnemyController>() });
+
+            }
+            if (!_JITOpened.Contains(PickUpType))
+            {
+                var JIT = PickUpSprites.FirstOrDefault(x => x.PickUpType == _PickUpType)?.JustInTime;
+                if (JIT != null)
+                {
+                    JITInstructionManager.Instance.UpdateJITController(JIT);
+                    JITInstructionManager.Instance.OpenJIT();
+                }
+                _JITOpened.Add(PickUpType);
             }
 
             Destroy(gameObject);
@@ -115,5 +131,6 @@ namespace SafeSurfing
     {
         public PickUpType PickUpType;
         public Sprite Sprite;
+        public JustInTimeInstruction JustInTime;
     }
 }

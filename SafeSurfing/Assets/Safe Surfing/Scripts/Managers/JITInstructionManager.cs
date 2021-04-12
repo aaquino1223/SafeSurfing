@@ -14,11 +14,14 @@ namespace SafeSurfing
 
         public GameObject Background;
 
+        public static JITInstructionManager Instance;
 
-
-        void Start()
+        void Awake()
         {
-
+            if (Instance == null)
+            {
+                Instance = this;
+            }
         }
 
         // Update is called once per frame
