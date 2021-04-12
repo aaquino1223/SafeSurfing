@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b470279bdcd0af444ae281ecd5b3be48, type: 3}
   m_Name: DDOS
   m_EditorClassIdentifier: 
-  Title: 
-  Text: 
+  Title: DDOS
+  Text: Also known as a distributed denial of service attack, completely floods your
+    network with thousands of requests. Don't let the DDOS enemy come into contact
+    with you, or your player might get slowed down.

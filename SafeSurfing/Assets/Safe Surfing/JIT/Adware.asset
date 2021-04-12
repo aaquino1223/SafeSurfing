@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b470279bdcd0af444ae281ecd5b3be48, type: 3}
   m_Name: Adware
   m_EditorClassIdentifier: 
-  Title: 
-  Text: 
+  Title: Adware
+  Text: Adware is software that bombards your computer with unwanted advertisements.
+    Be careful not to get drawn into this enemy's trap range.

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b470279bdcd0af444ae281ecd5b3be48, type: 3}
   m_Name: Worm
   m_EditorClassIdentifier: 
-  Title: 
-  Text: 
+  Title: Worm
+  Text: "A worm is a program that replicates itself in order to spread to other computers.
+    You may want to just avoid these enemies, unless you\u2019re up for a challenge."

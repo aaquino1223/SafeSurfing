@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -218,7 +218,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Levels:
+  - {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
+  - {fileID: 11400000, guid: dd27d955013ea9a478fa86ef312ac776, type: 2}
+  - {fileID: 11400000, guid: 1c8b9bb7645fd7c4f8ac735a2a007c86, type: 2}
   - {fileID: 11400000, guid: 6abfcbd897fdd7a40846bd4b661a9605, type: 2}
+  - {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
+  - {fileID: 11400000, guid: 1ebdbf59f89cbc140b77e37b087ec6c6, type: 2}
   WaveSpawnDelay: 3
   MinTimeBeforeSpawn: 5
   MaxTimeBeforeSpawn: 10

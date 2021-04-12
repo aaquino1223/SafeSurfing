@@ -34,5 +34,5 @@ MonoBehaviour:
       EnemyPrefab: {fileID: 632949384175780455, guid: 58b7758559591a34189069a7ddbd1eff,
         type: 3}
       JustInTime: {fileID: 0}
-  PickUpType: -1
+  PickUpType: 87
   AudioClip: {fileID: 0}

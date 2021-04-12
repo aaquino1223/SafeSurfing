@@ -157,7 +157,7 @@ MonoBehaviour:
   Screen: {fileID: 0}
   Frequency: 2
   Amplitude: 1
-  Level: {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
+  Level: {fileID: 11400000, guid: 6de347cd1b33d8f4faffc7c828236f45, type: 2}
 --- !u!50 &6797183218674311432
 Rigidbody2D:
   serializedVersion: 4

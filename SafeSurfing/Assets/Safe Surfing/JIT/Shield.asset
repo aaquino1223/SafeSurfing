@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b470279bdcd0af444ae281ecd5b3be48, type: 3}
-  m_Name: Trojan
+  m_Name: Shield
   m_EditorClassIdentifier: 
-  Title: Trojan
-  Text: The trojan horse is a computer program that pretends to be something useful
-    while actually causing harm or stealing data. Keep an eye out for impostors!
+  Title: Antivirus Shield
+  Text: "You\u2019ve acquired the Antivirus Shield! It creates a small but powerful
+    shield that protects you from damage for 5 seconds."

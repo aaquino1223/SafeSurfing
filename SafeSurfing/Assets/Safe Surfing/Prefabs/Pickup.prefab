@@ -49,27 +49,27 @@ MonoBehaviour:
   - PickUpType: 2
     Sprite: {fileID: -7906380028426127089, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
-    JustInTime: {fileID: 0}
+    JustInTime: {fileID: 11400000, guid: f074f8962c522014885831392949dc41, type: 2}
   - PickUpType: 1
     Sprite: {fileID: 5860460993067333106, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
-    JustInTime: {fileID: 0}
+    JustInTime: {fileID: 11400000, guid: 2570049a0907de04ea367dcf0adc7a8f, type: 2}
   - PickUpType: 4
     Sprite: {fileID: -2149529177950956658, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
-    JustInTime: {fileID: 0}
+    JustInTime: {fileID: 11400000, guid: ea1a8af0c6ecffb4baf079333ff79a12, type: 2}
   - PickUpType: 8
     Sprite: {fileID: 7972232649138161333, guid: 284a99d9595e22b418f7d9c1d4badb14,
       type: 3}
-    JustInTime: {fileID: 0}
+    JustInTime: {fileID: 11400000, guid: 5131cc2d4deef2646801de7893239547, type: 2}
   - PickUpType: 32
     Sprite: {fileID: 5706845783461447715, guid: ca99ee9a7b71513489468b0623c9ed3e,
       type: 3}
-    JustInTime: {fileID: 0}
+    JustInTime: {fileID: 11400000, guid: 778ebe1b68ad54845948691fd8883009, type: 2}
   - PickUpType: 64
     Sprite: {fileID: -6844568518026656586, guid: ca99ee9a7b71513489468b0623c9ed3e,
       type: 3}
-    JustInTime: {fileID: 0}
+    JustInTime: {fileID: 11400000, guid: 90e2cde8a3caf7d4eb11ad33f3f8f44d, type: 2}
   - PickUpType: 16
     Sprite: {fileID: 0}
     JustInTime: {fileID: 11400000, guid: 4f48e1088cffa8049812fe762279f0c1, type: 2}
@@ -77,9 +77,6 @@ MonoBehaviour:
   TrojanPrefab: {fileID: 4374667652156026736, guid: a49e5e04ea65b504d93f36239e8fa226,
     type: 3}
   FallSpeed: 2.5
-  TrojanJustInTime: {fileID: 11400000, guid: 4f48e1088cffa8049812fe762279f0c1, type: 2}
-  PickupJustInTime: {fileID: 0}
-  _JITManager: {fileID: 0}
 --- !u!212 &4421831271689683546
 SpriteRenderer:
   m_ObjectHideFlags: 0
