@@ -153,7 +153,7 @@ namespace SafeSurfing
                     if (spawningController != null)
                         spawningController.SpawnedEnemies += SpawnedEnemies;
 
-                    var sprite = gameObject.GetComponent<SpriteRenderer>()?.sprite;
+                    var sprite = enemyClone.GetComponent<SpriteRenderer>()?.sprite;
                     if (spawnPoint.JustInTime != null)
                         enemyController.StateChanged += (s, e) =>
                         {
