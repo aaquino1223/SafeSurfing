@@ -41,6 +41,7 @@ namespace SafeSurfing
         public static SceneManager Instance;
 
         public AudioPlayer AudioPlayer;
+        public GameObject StartBG;
 
         private void Awake()
         {
@@ -106,7 +107,13 @@ namespace SafeSurfing
                 if (previous.TryGetComponent(out animator))
                     animator.SetBool("Open", false);
 
-                StartCoroutine(Util.TimedAction(null, () => previous.SetActive(false), previousTimeAfter));
+                StartCoroutine(Util.TimedAction(null, () => {
+                    previous.SetActive(false);
+                    if (StartBG != null && StartBG.activeInHierarchy && previous == StartMenu)
+                    {
+                        StartBG.SetActive(false);
+                    }
+                }, previousTimeAfter));
             }
 
             StartCoroutine(Util.TimedAction(null, () =>
