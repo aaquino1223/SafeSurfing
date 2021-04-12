@@ -12,7 +12,6 @@ namespace SafeSurfing
     public class GUIManager : MonoBehaviour
     {
         public Image[] Lives;
-        public GameObject Player;
         private HealthController _HealthController;
 
         public GameManager GameManager;
@@ -23,22 +22,6 @@ namespace SafeSurfing
         public TextMeshProUGUI LevelText;
         public TextMeshProUGUI ScoreText;
 
-        private void OnEnable()
-        {
-            Lives.ToList().ForEach(x => x.enabled = true);
-            OnScoreChanged();
-
-            if (Player == null)
-                Player = GameObject.FindGameObjectWithTag("Player");
-
-            _HealthController = Player.GetComponent<HealthController>();
-            if (_HealthController != null)
-            {
-                _HealthController.AddLifeLostListener(OnPlayerLifeLost, true);
-                _HealthController.AddLifeGainedListener(OnPlayerLifeGained);
-            }
-        }
-
         private void Awake()
         {
             if (GameManager != null)
@@ -46,10 +29,24 @@ namespace SafeSurfing
                 GameManager.WaveChanged.AddListener(OnWaveChanged);
                 GameManager.LevelChanged.AddListener(OnLevelChanged);
                 GameManager.ScoreChanged.AddListener(OnScoreChanged);
+                GameManager.PlayerInstantiated += GameManager_PlayerInstantiated;
             }
 
             SetLevelTextActive(false);
             SetWaveTextActive(false);
+        }
+
+        private void GameManager_PlayerInstantiated(object sender, PlayerController playerController)
+        {
+            Lives.ToList().ForEach(x => x.enabled = true);
+            OnScoreChanged();
+
+            _HealthController = playerController;
+            if (_HealthController != null)
+            {
+                _HealthController.AddLifeLostListener(OnPlayerLifeLost, true);
+                _HealthController.AddLifeGainedListener(OnPlayerLifeGained);
+            }
         }
 
         private void SetLevelTextActive(bool value) => LevelText.gameObject.SetActive(value);

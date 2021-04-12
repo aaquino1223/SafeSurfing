@@ -49,9 +49,11 @@ namespace SafeSurfing
 
         public AudioPlayer AudioPlayer;
 
-        private HealthController _PlayerHealth;
+        private PlayerController _PlayerController;
 
         private HashSet<JustInTimeInstruction> _JITOpened = new HashSet<JustInTimeInstruction>();
+
+        internal event EventHandler<PlayerController> PlayerInstantiated;
 
         private void OnEnable()
         {
@@ -67,8 +69,10 @@ namespace SafeSurfing
 
             var player = Instantiate(Player, Player.GetComponent<Transform>().position, transform.rotation, transform);
 
-            _PlayerHealth = player.GetComponent<HealthController>();
-            _PlayerHealth.AddLifeLostListener(OnPlayerLifeLost, true);
+            _PlayerController = player.GetComponent<PlayerController>();
+            _PlayerController.AddLifeLostListener(OnPlayerLifeLost, true);
+
+            PlayerInstantiated?.Invoke(this, _PlayerController);
 
             NextLevel();
         }
