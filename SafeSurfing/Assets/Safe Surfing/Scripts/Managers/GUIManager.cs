@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 using SafeSurfing.Common;
+using System.Linq;
 
 namespace SafeSurfing
 {
@@ -22,6 +23,22 @@ namespace SafeSurfing
         public TextMeshProUGUI LevelText;
         public TextMeshProUGUI ScoreText;
 
+        private void OnEnable()
+        {
+            Lives.ToList().ForEach(x => x.enabled = true);
+            OnScoreChanged();
+
+            if (Player == null)
+                Player = GameObject.FindGameObjectWithTag("Player");
+
+            _HealthController = Player.GetComponent<HealthController>();
+            if (_HealthController != null)
+            {
+                _HealthController.AddLifeLostListener(OnPlayerLifeLost, true);
+                _HealthController.AddLifeGainedListener(OnPlayerLifeGained);
+            }
+        }
+
         private void Awake()
         {
             if (GameManager != null)
@@ -33,24 +50,6 @@ namespace SafeSurfing
 
             SetLevelTextActive(false);
             SetWaveTextActive(false);
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            if (Player == null)
-                Player = GameObject.FindGameObjectWithTag("Player");
-
-            if (Player == null)
-                return;
-
-            _HealthController = Player.GetComponent<HealthController>();
-            if (_HealthController != null)
-            {
-                _HealthController.AddLifeLostListener(OnPlayerLifeLost, true);
-                _HealthController.AddLifeGainedListener(OnPlayerLifeGained);
-            }
-
         }
 
         private void SetLevelTextActive(bool value) => LevelText.gameObject.SetActive(value);
