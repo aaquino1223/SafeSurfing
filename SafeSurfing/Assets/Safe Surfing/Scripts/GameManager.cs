@@ -79,7 +79,7 @@ namespace SafeSurfing
 
         private void OnPlayerLifeLost()
         {
-            if (_PlayerHealth.IsDead)
+            if (_PlayerController.IsDead)
                 PlayerLost?.Invoke();
         }
 

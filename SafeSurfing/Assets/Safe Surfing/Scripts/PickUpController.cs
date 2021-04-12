@@ -94,10 +94,14 @@ namespace SafeSurfing
             }
             if (!_JITOpened.Contains(PickUpType))
             {
-                var JIT = PickUpSprites.FirstOrDefault(x => x.PickUpType == _PickUpType)?.JustInTime;
+
+                var pickUpSprite = PickUpSprites.FirstOrDefault(x => x.PickUpType == _PickUpType);
+                var JIT = pickUpSprite?.JustInTime;
+                var sprite = pickUpSprite?.Sprite;
+
                 if (JIT != null)
                 {
-                    JITInstructionManager.Instance.UpdateJITController(JIT);
+                    JITInstructionManager.Instance.UpdateJITController(JIT, sprite);
                     JITInstructionManager.Instance.OpenJIT();
                 }
                 _JITOpened.Add(PickUpType);

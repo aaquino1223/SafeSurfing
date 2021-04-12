@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using static SafeSurfing.Common.Constants.PlayerInput;
 
@@ -11,10 +12,11 @@ namespace SafeSurfing
         // Start is called before the first frame update
         public TextMeshProUGUI TitleText;
         public TextMeshProUGUI TextToShow;
-
+        public Image JITImage;
         public GameObject Background;
 
         public static JITInstructionManager Instance;
+        
 
         void Awake()
         {
@@ -37,10 +39,17 @@ namespace SafeSurfing
 
         }
 
-        public void UpdateJITController(JustInTimeInstruction jit)
+        public void UpdateJITController(JustInTimeInstruction jit, Sprite sprite = null)
         {
             TitleText.text = jit.Title;
             TextToShow.text = jit.Text;
+            if (sprite == null)
+                JITImage.enabled = false;
+            else
+            {
+                JITImage.enabled = true;
+                JITImage.sprite = sprite;
+            }
         }
 
         public void OpenJIT()

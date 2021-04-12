@@ -71,7 +71,8 @@ MonoBehaviour:
       type: 3}
     JustInTime: {fileID: 11400000, guid: 90e2cde8a3caf7d4eb11ad33f3f8f44d, type: 2}
   - PickUpType: 16
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 5651897142441623990, guid: 284a99d9595e22b418f7d9c1d4badb14,
+      type: 3}
     JustInTime: {fileID: 11400000, guid: 4f48e1088cffa8049812fe762279f0c1, type: 2}
   EffectDuration: 5
   TrojanPrefab: {fileID: 4374667652156026736, guid: a49e5e04ea65b504d93f36239e8fa226,
