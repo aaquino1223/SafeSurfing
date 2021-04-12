@@ -23,6 +23,7 @@ namespace SafeSurfing
         public UnityEvent WaveChanged;
         public UnityEvent LevelChanged;
         public UnityEvent ScoreChanged;
+        public UnityEvent PlayerWon;
 
         public LevelBehavior[] Levels;
         public int WaveIndex { get; private set; } = -1;
@@ -37,9 +38,11 @@ namespace SafeSurfing
 
         public int Score { get; private set; } = 0;
 
-        private Dictionary<JITType, bool> _JITFlags;
+
         public float MinTimeBeforeSpawn = 10f;
         public float MaxTimeBeforeSpawn = 15f;
+
+        public AudioPlayer AudioPlayer;
 
         // Start is called before the first frame update
         void Start()
@@ -62,7 +65,11 @@ namespace SafeSurfing
             if (Levels == null || LevelIndex >= Levels.Count())
                 return;
 
-            _PickUpType = Levels[LevelIndex].PickUpType;
+            var level = Levels[LevelIndex];
+            _PickUpType = level.PickUpType;
+
+            if (level.AudioClip != null)
+                AudioPlayer.PlayBackground(level.AudioClip);
 
             NextWave();
 
@@ -71,6 +78,7 @@ namespace SafeSurfing
 
             StartCoroutine(Util.TimedAction(null, SpawnPickupRecursive, WaveSpawnDelay));
         }
+
         private void NextWave()
         {
             // ONLY FOR TESTING PURPOSES
@@ -191,7 +199,9 @@ namespace SafeSurfing
                 if (WaveIndex < Levels[LevelIndex].Waves.Count() - 1)
                     NextWave();
                 else if (LevelIndex < Levels.Count() - 1)
-                    NextLevel(); //TODO: Else they won, go to final screen
+                    NextLevel();
+                else
+                    PlayerWon?.Invoke();
             }
         }
 

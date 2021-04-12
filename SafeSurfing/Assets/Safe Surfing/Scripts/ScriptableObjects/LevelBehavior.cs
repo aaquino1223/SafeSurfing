@@ -10,7 +10,8 @@ namespace SafeSurfing
     public class LevelBehavior : ScriptableObject
     {
         public Wave[] Waves;
-        public PickUpType PickUpType; 
+        public PickUpType PickUpType;
+        public AudioClip AudioClip;
     }
 
     [Serializable]

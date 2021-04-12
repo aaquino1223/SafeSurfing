@@ -145,3 +145,4 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
   PickUpType: 1
+  AudioClip: {fileID: 8300000, guid: d45d62fae13024f6bb525dcd962a04d5, type: 3}

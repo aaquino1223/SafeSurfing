@@ -9,6 +9,8 @@ namespace SafeSurfing
     [CreateAssetMenu]
     public class AudioPlayer : ScriptableObject
     {
+        private AudioSource _BackgroundMusic;
+
         public void PlayOneShot(AudioClip audioClip)
         {
             var gameObject = new GameObject("Sound");
@@ -23,11 +25,42 @@ namespace SafeSurfing
                 ));
         }
 
+        public void PlayBackground(AudioClip audioClip)
+        {
+            if (_BackgroundMusic == null)
+            {
+                var gameObject = new GameObject("Background Music");
+                _BackgroundMusic = gameObject.AddComponent<AudioSource>();
+                gameObject.AddComponent<CoroutineBehavior>();
+                _BackgroundMusic.loop = true;
+            }
+
+            _BackgroundMusic.clip = audioClip;
+            _BackgroundMusic.volume = 0f;
+            _BackgroundMusic.Play();
+            var behavior = _BackgroundMusic.gameObject.GetComponent<CoroutineBehavior>();
+            behavior.StartCoroutine(FadeAudioSource.StartFade(_BackgroundMusic, 1f, 0.5f));
+        }
+
+        public void StopBackground()
+        {
+            if (_BackgroundMusic != null)
+            {
+                _BackgroundMusic.Stop();
+                Destroy(_BackgroundMusic.gameObject);
+                _BackgroundMusic = null;
+            }
+        }
+
         public class CoroutineBehavior : MonoBehaviour
         {
 
         }
 
+        private void OnDestroy()
+        {
+            _BackgroundMusic = null;
+        }
     }
 
 }

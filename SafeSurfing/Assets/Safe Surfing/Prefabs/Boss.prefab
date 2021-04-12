@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9d64d45a45dea4294484019f6b000e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lives: 20
+  Lives: 100
   LifeGained:
     m_PersistentCalls:
       m_Calls: []
@@ -157,6 +157,7 @@ MonoBehaviour:
   Screen: {fileID: 0}
   Frequency: 2
   Amplitude: 1
+  Level: {fileID: 11400000, guid: 6fe99ec2f33996e43a2ddcad45df9d69, type: 2}
 --- !u!50 &6797183218674311432
 Rigidbody2D:
   serializedVersion: 4
