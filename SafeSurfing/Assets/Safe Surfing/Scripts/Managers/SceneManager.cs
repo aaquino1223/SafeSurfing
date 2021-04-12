@@ -34,6 +34,10 @@ namespace SafeSurfing
         private GameObject _Current;
         private float _CurrentTimeAfter = 0f;
 
+        private GameObject _LastFinish;
+        private float _LastTimeAfterFinish;
+        private AudioClip _LastFinishAudio;
+
         public static SceneManager Instance;
 
         public AudioPlayer AudioPlayer;
@@ -73,14 +77,19 @@ namespace SafeSurfing
                     _CurrentTimeAfter = TimeAfterGame;
                     break;
                 case "Victory":
-                    _Current = VictoryScreen;
-                    _CurrentTimeAfter = TimeAfterVictory;
-                    oneShotAudioClip = VictoryClip;
+                    _LastFinish = _Current = VictoryScreen;
+                    _LastTimeAfterFinish = _CurrentTimeAfter = TimeAfterVictory;
+                    _LastFinishAudio = oneShotAudioClip = VictoryClip;
                     break;
                 case "Lost":
-                    _Current = LostScreen;
-                    _CurrentTimeAfter = TimeAfterLost;
-                    oneShotAudioClip = LostClip;
+                    _LastFinish = _Current = LostScreen;
+                    _LastTimeAfterFinish = _CurrentTimeAfter = TimeAfterLost;
+                    _LastFinishAudio = oneShotAudioClip = LostClip;
+                    break;
+                case "Finish":
+                    _Current = _LastFinish;
+                    _CurrentTimeAfter = _LastTimeAfterFinish;
+                    oneShotAudioClip = _LastFinishAudio;
                     break;
                 case "Credits":
                     _Current = CreditsScreen;
