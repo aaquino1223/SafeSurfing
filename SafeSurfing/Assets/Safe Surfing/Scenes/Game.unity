@@ -228,8 +228,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 496b4090c0d9f914eb52b14e06f8b649, type: 2}
   - {fileID: 11400000, guid: 1ebdbf59f89cbc140b77e37b087ec6c6, type: 2}
   WaveSpawnDelay: 3
-  MinTimeBeforeSpawn: 5
-  MaxTimeBeforeSpawn: 10
+  MinTimeBeforeSpawn: 7
+  MaxTimeBeforeSpawn: 12
   AudioPlayer: {fileID: 11400000, guid: 1f16a3507b618e341beb073be177d55e, type: 2}
 --- !u!1 &119216130
 GameObject:
@@ -2028,7 +2028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &745005552
 Transform:
   m_ObjectHideFlags: 0
@@ -2626,7 +2626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &967795222
 Transform:
   m_ObjectHideFlags: 0
@@ -3298,7 +3298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1252654650
 RectTransform:
   m_ObjectHideFlags: 0
