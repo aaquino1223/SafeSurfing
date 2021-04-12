@@ -198,7 +198,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dd27d955013ea9a478fa86ef312ac776, type: 2}
   - {fileID: 11400000, guid: 1c8b9bb7645fd7c4f8ac735a2a007c86, type: 2}
   WaveSpawnDelay: 3
-  _JITManager: {fileID: 548197351}
   MinTimeBeforeSpawn: 1
   MaxTimeBeforeSpawn: 5
 --- !u!82 &1609701
@@ -1052,7 +1051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &548197350
 RectTransform:
   m_ObjectHideFlags: 0

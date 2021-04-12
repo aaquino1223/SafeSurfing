@@ -19,9 +19,12 @@ namespace SafeSurfing
         void Awake()
         {
             if (Instance == null)
-            {
                 Instance = this;
-            }
+        }
+
+        private void Start()
+        {
+            CloseJIT();
         }
 
         // Update is called once per frame
