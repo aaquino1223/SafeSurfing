@@ -21,7 +21,7 @@ namespace SafeSurfing
 
         private void Update()
         {
-            if (PlayerTransform.localPosition.y >= transform.localPosition.y)
+            if (PlayerTransform != null && PlayerTransform.localPosition.y >= transform.localPosition.y)
                 Detonate();
         }
 

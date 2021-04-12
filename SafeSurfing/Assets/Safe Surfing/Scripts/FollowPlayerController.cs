@@ -31,11 +31,18 @@ namespace SafeSurfing {
                     pattern.AddRange(SpawnBehavior());
                     break;
                 case EnemyState.Normal:
-                    var direction = PlayerTransform.localPosition - transform.localPosition;
-                    var normDirection = direction.normalized;
+                    Vector3 normDirection = Vector3.zero;
+                    if (PlayerTransform != null)
+                    {
+                        var direction = PlayerTransform.localPosition - transform.localPosition;
+                        normDirection = direction.normalized;
 
-                    if (normDirection.y >= 0) //If below player keep going in last direction
+                        if (normDirection.y >= 0) //If below player keep going in last direction
+                            normDirection = _LastDirection;
+                    }
+                    else
                         normDirection = _LastDirection;
+
 
                     if (CanRotate)
                     {
