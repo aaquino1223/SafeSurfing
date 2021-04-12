@@ -12,7 +12,7 @@ namespace SafeSurfing
         public TextMeshProUGUI ScoreText;
 
         // Start is called before the first frame update
-        void Start()
+        void OnEnable()
         {
             ScoreText.text = "Final Score: " + GameManager.Score;
 

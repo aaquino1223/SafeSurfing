@@ -32,11 +32,10 @@ namespace SafeSurfing
         // Update is called once per frame
         void Update()
         {
-            if (IsPressingSpace)
+            if (IsPressingInteract)
             {
                 CloseJIT();
             }
-
         }
 
         public void UpdateJITController(JustInTimeInstruction jit, Sprite sprite = null)
