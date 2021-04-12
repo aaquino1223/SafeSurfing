@@ -148,18 +148,19 @@ namespace SafeSurfing
                     enemyController.Screen = Screen;
                     enemyController.Destroyed += EnemyDestroyed;
                     
-
+                    
                     var spawningController = enemyController as ICanSpawnEnemy;
                     if (spawningController != null)
                         spawningController.SpawnedEnemies += SpawnedEnemies;
 
+                    var sprite = gameObject.GetComponent<SpriteRenderer>()?.sprite;
                     if (spawnPoint.JustInTime != null)
                         enemyController.StateChanged += (s, e) =>
                         {
                             var JIT = spawnPoint.JustInTime;
                             if (e == EnemyState.Normal && !_JITOpened.Contains(JIT))
                             {
-                                JITInstructionManager.Instance.UpdateJITController(JIT);
+                                JITInstructionManager.Instance.UpdateJITController(JIT, sprite);
                                 JITInstructionManager.Instance.OpenJIT();
 
                                 _JITOpened.Add(JIT);
