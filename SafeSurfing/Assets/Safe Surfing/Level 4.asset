@@ -80,7 +80,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 25
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 28
@@ -88,7 +88,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 31
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 34
@@ -141,7 +141,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 31
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 34
@@ -172,5 +172,5 @@ MonoBehaviour:
       EnemyPrefab: {fileID: 7579518276567223312, guid: 02b65911405819f4ab0e8c6639fdb0d4,
         type: 3}
       JustInTime: {fileID: 0}
-  PickUpType: 87
+  PickUpType: 119
   AudioClip: {fileID: 0}

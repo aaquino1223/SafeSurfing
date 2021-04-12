@@ -27,7 +27,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 10
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 13
@@ -80,11 +80,11 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 28
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 31
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 34
@@ -93,11 +93,11 @@ MonoBehaviour:
       JustInTime: {fileID: 0}
   - SpawnPoints:
     - Time: 1
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 4
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 7
@@ -117,7 +117,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 19
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 22
@@ -137,7 +137,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 34
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 37
@@ -160,5 +160,5 @@ MonoBehaviour:
       EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
-  PickUpType: 23
+  PickUpType: 83
   AudioClip: {fileID: 0}
