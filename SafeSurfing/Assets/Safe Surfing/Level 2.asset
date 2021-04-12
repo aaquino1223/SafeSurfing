@@ -15,9 +15,9 @@ MonoBehaviour:
   Waves:
   - SpawnPoints:
     - Time: 1
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
         type: 3}
-      JustInTime: {fileID: 0}
+      JustInTime: {fileID: 11400000, guid: e3c4fa601b157a442bd2ef343d1e2973, type: 2}
     - Time: 4
       EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
@@ -35,22 +35,6 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 16
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 19
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 22
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 25
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 28
       EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
         type: 3}
       JustInTime: {fileID: 0}
@@ -60,19 +44,19 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 3
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 5
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 7
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 9
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
+      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 11
@@ -96,22 +80,6 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 21
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 23
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 25
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 27
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 29
       EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
         type: 3}
       JustInTime: {fileID: 0}
@@ -141,7 +109,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 7
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 8
@@ -169,7 +137,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 14
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
+      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 15
@@ -177,23 +145,7 @@ MonoBehaviour:
         type: 3}
       JustInTime: {fileID: 0}
     - Time: 16
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 17
       EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 18
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 19
-      EnemyPrefab: {fileID: 3496359801612778434, guid: 1d243d6d2a83ac64b88e5545b551c8cd,
-        type: 3}
-      JustInTime: {fileID: 0}
-    - Time: 20
-      EnemyPrefab: {fileID: 4112836500282658221, guid: 39412345cfceb454aa331c19a82587c2,
         type: 3}
       JustInTime: {fileID: 0}
   PickUpType: 3

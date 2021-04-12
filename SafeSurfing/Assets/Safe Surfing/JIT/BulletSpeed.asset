@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BulletSpeed
   m_EditorClassIdentifier: 
   Title: 'Bullet Speed Up! '
-  Text: 'The speed of your bullets will be increased for 5 seconds! '
+  Text: The speed of your bullets will be increased for 5 seconds!

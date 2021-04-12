@@ -8,7 +8,8 @@ namespace SafeSurfing
 {
     public class MenuManager : MonoBehaviour
     {
-        public string NextScene;
+        public string NextSceneWithSpace;
+        public string NextSceneWithX;
         //private AudioSource _TitleTheme;
         //public GameObject PlayableGame;
         //private float _TimeBeforeStart = 1.75f;
@@ -25,12 +26,16 @@ namespace SafeSurfing
         // Update is called once per frame
         void Update()
         {
-            if (IsPressingSpace)
+            if (IsPressingSpace && !string.IsNullOrWhiteSpace(NextSceneWithSpace))
             {
                 //StartCoroutine(FadeAudioSource.StartFade(_TitleTheme, _TimeBeforeStart, 0f));
                 //_Transition.SetBool("Open", false);
                 //StartCoroutine(StartGame());
-                SceneManager.Instance.UpdateScene(NextScene);
+                SceneManager.Instance.UpdateScene(NextSceneWithSpace);
+            }
+            if (IsPressingInteract && !string.IsNullOrWhiteSpace(NextSceneWithX))
+            {
+                SceneManager.Instance.UpdateScene(NextSceneWithX);
             }
 
         }

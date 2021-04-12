@@ -26,6 +26,11 @@ namespace SafeSurfing
         public float TimeAfterLost;
         public AudioClip LostClip;
 
+        [Header("Credits")]
+        public GameObject CreditsScreen;
+        public float TimeAfterCredits;
+        public AudioClip CreditsClip;
+
         private GameObject _Current;
         private float _CurrentTimeAfter = 0f;
 
@@ -76,6 +81,11 @@ namespace SafeSurfing
                     _Current = LostScreen;
                     _CurrentTimeAfter = TimeAfterLost;
                     oneShotAudioClip = LostClip;
+                    break;
+                case "Credits":
+                    _Current = CreditsScreen;
+                    _CurrentTimeAfter = TimeAfterCredits;
+                    audioClip = CreditsClip;
                     break;
             }
 

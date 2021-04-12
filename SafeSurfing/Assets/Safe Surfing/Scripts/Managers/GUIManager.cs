@@ -65,7 +65,7 @@ namespace SafeSurfing
         private void OnLevelChanged()
         {
             var levelNum = GameManager.LevelIndex + 1;
-            LevelText.text = "Level " + levelNum;
+            LevelText.text = "LEVEL " + levelNum;
 
             StartCoroutine(Util.TimedAction(() => SetLevelTextActive(true), () => SetLevelTextActive(false), GameManager.WaveSpawnDelay));
         }
@@ -74,14 +74,14 @@ namespace SafeSurfing
         {
             //comes from enemyspawner
             var waveNum = GameManager.WaveIndex + 1;
-            WaveText.text = "Wave " + waveNum;
+            WaveText.text = "WAVE " + waveNum;
             StartCoroutine(Util.TimedAction(() => SetWaveTextActive(true), () => SetWaveTextActive(false), GameManager.WaveSpawnDelay));
         }
 
         private void OnScoreChanged()
         {
             // Add Score variable
-           ScoreText.text = "Score: " + GameManager.Score;
+           ScoreText.text = "SCORE: " + GameManager.Score;
         }
 
 
